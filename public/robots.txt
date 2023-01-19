@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://juanbri.vercel.app/
+
+# Sitemaps
+Sitemap: https://juanbri.vercel.app/sitemap.xml
