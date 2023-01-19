@@ -12,7 +12,7 @@ export default function Home() {
     "Briceno | Front End Developer | Las Palmas de Gran Canaria Spain";
   const date = new Date();
   const image =
-    "https://raw.githubusercontent.com/juanbric/juanbri/5043605b6b0e43cc096337e3466821ef6c1010e1/public/logo.svg";
+    "https://firebasestorage.googleapis.com/v0/b/juanbri-face-recognition.appspot.com/o/images%2Flogo.svg?alt=media&token=5662b932-40eb-4b11-b0bb-e4b40d9b48a6";
 
   return (
     <>
