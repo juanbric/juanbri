@@ -21,10 +21,7 @@ export default function Home() {
 
       {/* Header */}
       <section className="grid grid-cols-4 gap-4 items-center">
-        <img
-          src="/juan.png"
-          className="w-auto rounded-full"
-        />
+        <img src="/juan.png" className="w-auto rounded-full" />
         <span className="col-span-3">
           <h2 className="header">Juan Pablo Briceno</h2>
           <h2 className="copy mt-1">Product-focused Front End Developer</h2>
@@ -82,6 +79,7 @@ export default function Home() {
               description={project.description}
               tech={project.tech}
               img={project.img}
+              key={i}
             />
           );
         })}
@@ -96,6 +94,7 @@ export default function Home() {
               platform={stuff.platform}
               link={stuff.link}
               userName={stuff.userName}
+              key={i}
             />
           );
         })}
