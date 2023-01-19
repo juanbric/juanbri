@@ -1,6 +1,7 @@
 import Experience, { careerPath } from "@/components/Experience";
+import Links, { myStuff } from "@/components/Links";
 import MetaTag from "@/components/MetaTag";
-import Projects from "@/components/Projects";
+import Projects, { gigs } from "@/components/Projects";
 import Schema from "@/components/Schema";
 import Spacer from "@/components/Spacer";
 
@@ -19,10 +20,10 @@ export default function Home() {
       <MetaTag title={title} description={bio} url={undefined} image={image} />
 
       {/* Header */}
-      <section className="grid grid-cols-4 items-center">
+      <section className="grid grid-cols-4 gap-4 items-center">
         <img
           src="/juan.png"
-          className="w-[90px] h-[90px] hover:scale-110 transform-gpu ease-in-out duration-300 rounded-full"
+          className="w-auto rounded-full"
         />
         <span className="col-span-3">
           <h2 className="header">Juan Pablo Briceno</h2>
@@ -61,28 +62,44 @@ export default function Home() {
               workLink={experience.workLink}
               description={experience.description}
               tech={experience.tech}
+              key={i}
+            />
+          );
+        })}
+      </section>
+      <Spacer size={15} />
+
+      {/* Side Projects */}
+      <section>
+        <h2>Side Projects</h2>
+        <Spacer size={35} />
+        {gigs.map((project, i) => {
+          return (
+            <Projects
+              period={project.period}
+              title={project.title}
+              workLink={project.workLink}
+              description={project.description}
+              tech={project.tech}
+              img={project.img}
             />
           );
         })}
       </section>
 
       <section>
-        <h2>Side Projects</h2>
+        <h2>Links</h2>
         <Spacer size={35} />
-        {careerPath.map((experience, i) => {
+        {myStuff.map((stuff, i) => {
           return (
-            <Projects
-              period={experience.period}
-              title={experience.title}
-              workLink={experience.workLink}
-              description={experience.description}
-              tech={experience.tech}
+            <Links
+              platform={stuff.platform}
+              link={stuff.link}
+              userName={stuff.userName}
             />
           );
         })}
       </section>
-
-      <section></section>
     </>
   );
 }

@@ -1,34 +1,32 @@
 import Spacer from "./Spacer";
 
-export const project = [
+export const gigs = [
   {
-    period: "2021 - current",
-    img: '/logo',
+    period: "Ongoing",
+    img: "/trovali.svg",
     title: "Trovali",
     workLink: "https://face-recognition-juanbri.vercel.app/",
     description:
-      "Led a team of 3 engineers to develop our web3 creator tools and eBook NFT app. Worked closely with the CTO to build our tactical objectives and improve both our technical directions and shipping frequency.",
-    tech: `React • NextJS • RESTFUL API • CI/CD • Jira • Git • 
-    <a href="https://www.metaplex.io/" target="_blank" rel="noopener noreferrer" className="hover:underline">Metaplex</a> 
-    • TailwindCSS`,
+      "Next.js app that uses AI facial recognition technology to detect and identify individuals in uploaded images. It includes user authentication and authorization, the ability to add extra information on the recognized and uploaded individuals, and a search function that allows users to search for individuals by name and tags.",
+    tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
   },
   {
-    period: "2019 - current",
-    img: '',
-    title: "Front End Engineer – Freelance",
+    period: "2022 - Ongoing",
+    img: "zentra.svg",
+    title: "zentra dev",
     workLink: "https://www.zentradev.vercel.app/",
     description:
-      "Worked with a range of agencies, start-ups and individuals to build products. Clients included well known Photographers, local Schools, and Kitchen Consultants.",
-    tech: "React • NextJS • TypeScript • Contentful • TailwindCSS • Chakra UI",
+      "A web development agency that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and ongoing maintenance and support.",
+    tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
   },
   {
-    period: "2020 - 2021",
-    img: '',
-    title: "Tech Talent Acquisition Consultant - EBC",
-    workLink: "https://www.ethosbc.com/",
+    period: "2023",
+    img: "/melenti.svg",
+    title: "Blog about Mental Health",
+    workLink: "https://www.melenti.vercel.app/",
     description:
-      "International full-cycle technical recruiting projects, with a deep understanding of global recruitment practices and the ability to source, engage, and activate passive candidates",
-    tech: "SalesForce • SmartRecruiters • Pocket Recruiter • Bullhorn",
+      "Blog about mental health and emotional wellbeing in Spanish. All it's infraestructure has been optminized for SEO, including sitemap, schemas, onsite SEO, copy writing, keyword analysis and more.",
+    tech: "React • Next.js • TypeScript • Contentful • Email-js • TailwindCSS • Chakra UI",
   },
 ];
 
@@ -49,9 +47,9 @@ const Projects = ({
 }) => {
   return (
     <div className="lg:grid lg:grid-cols-4">
-      <p className="copy">{period}</p>
+      <p className="copy mb-2">{period}</p>
       <div className="lg:col-span-3">
-        <img src={img} className="w-8 h-8" />
+        <img src={img} className="w-8 h-8 pb-1" />
         <h2 className="flex items-center">
           <a
             href={workLink}
@@ -69,7 +67,7 @@ const Projects = ({
           >
             <img
               src="/arrow.svg"
-              className="w-[14px] h-[14px] transform rotate-[10deg]"
+              className="w-[14px] h-[14px] transform rotate-[20deg]"
             />
           </a>
         </h2>

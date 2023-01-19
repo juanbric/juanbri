@@ -63,7 +63,7 @@ const Experience = ({
           >
             <img
               src="/arrow.svg"
-              className="w-[14px] h-[14px] transform rotate-[10deg]"
+              className="w-[14px] h-[14px] transform rotate-[20deg]"
             />
           </a>
         </h2>
