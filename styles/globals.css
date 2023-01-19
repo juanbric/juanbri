@@ -34,14 +34,14 @@ main {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.64)
+  color: rgba(255, 255, 255, 0.64);
 }
 
 .sub-copy {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  opacity: 0.5
+  opacity: 0.5;
 }
 
 .red {
@@ -56,8 +56,19 @@ main {
   background: #3c31dd;
 }
 
+.bg-blue {
+  background-color: #3c31dd;
+}
+
 .dark {
   background: #0f0f10;
+}
+
+.shorten-p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 /* Grid system */
@@ -85,7 +96,6 @@ main {
   }
 }
 
-
 /* Animated grid */
 .animated-grid {
   height: 86vh;
@@ -97,7 +107,6 @@ main {
     "7 x x 8"
     "9 10 11 12"
     "9 10 11 12";
-    ;
   grid-template-rows: repeat(4, 25%);
   grid-template-columns: 240px auto auto 240px;
 
