@@ -11,7 +11,7 @@ const BlogCard = ({
 }) => {
   return (
     <>
-      <img src={img} className="self-center md:self-start h-[150px]" />
+      <img src={img} className="self-center md:self-start rounded-[6px] w-full" />
       <h2 className="mb-2 mt-4 text-center md:text-start md:self-start">
         {title}
       </h2>

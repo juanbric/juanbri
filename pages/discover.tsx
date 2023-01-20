@@ -31,7 +31,7 @@ const discover = ({ blogs }: { blogs: any }) => {
   const title = "Blog | Briceno | Front End Developer";
   const date = new Date();
   const image =
-    "https://firebasestorage.googleapis.com/v0/b/juanbri-face-recognition.appspot.com/o/images%2Flogo.svg?alt=media&token=5662b932-40eb-4b11-b0bb-e4b40d9b48a6";
+    "https://svgshare.com/i/pdv.svg";
   return (
     <>
       <Schema
