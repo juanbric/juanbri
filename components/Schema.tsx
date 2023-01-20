@@ -1,5 +1,6 @@
 //@ts-ignore
 import { Helmet } from "react-helmet";
+import { URL } from "@/config";
 
 const Schema = ({
   title,
@@ -23,7 +24,7 @@ const Schema = ({
               "@type": "BlogPosting",
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://melenti.vercel.app/"
+                "@id": "${URL}"
               },
               "headline": "${title}",
               "datePublished": "${date}",
