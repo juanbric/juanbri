@@ -9,12 +9,12 @@ const Appbar = () => {
       >
         <img src="/logo.svg" className="w-[32px] h-[32px] shadow-lg  " />
       </Link>
-      <Link
-        className="bg-blue py-1 rounded-[6px] px-3"
+      {/* <Link
+        className="bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300"
         href={"/descubre"}
       >
-        Descubre
-      </Link>
+        Discover
+      </Link> */}
     </div>
   );
 };

@@ -5,11 +5,13 @@ const Schema = ({
   title,
   date,
   image,
+  articleBody,
   description,
 }: {
   title: any;
   date: any;
   image: any;
+  articleBody: any;
   description: any;
 }) => {
   return (
@@ -18,20 +20,29 @@ const Schema = ({
         {`
             {
               "@context": "http://schema.org",
-              "@type": "Website",
+              "@type": "BlogPosting",
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://zentradev.vercel.app/"
+                "@id": "https://melenti.vercel.app/"
               },
               "headline": "${title}",
               "datePublished": "${date}",
               "author": {
                 "@type": "Person",
-                "name": "Juan Pablo Briceno"
+                "name": "Juan Pablo Briceno | Front End Developer | Las Palmas de Gran Canaria | Spain"
               },
               "image": "${image}",
+              "articleBody": "${articleBody}",
+              "publisher": {
+                "@type": "Person",
+                "name": "Juan Pablo Briceno | Front End Developer | Las Palmas de Gran Canaria | Spain",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://svgshare.com/i/pdv.svg"
+                }
+              },
               "copyrightYear": 2023,
-              "inLanguage": "en-U",
+              "inLanguage": "en-UK",
               "description": "${description}"
             }
           `}

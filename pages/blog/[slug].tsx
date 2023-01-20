@@ -1,13 +1,12 @@
-import MetaTag from "../components/MetaTag";
 import { createClient } from "contentful";
-import Skeleton from "../components/Skeleton";
 //@ts-ignore
 import ReactMarkdown from "react-markdown";
-import Logo from "../components/Logo";
-import Spacer from "../components/Spacer";
-import ProgressBar from "../components/ProgressBar";
-import Schema from "../components/Schema";
 import Image from "next/image";
+import Skeleton from "@/components/Skeleton";
+import Schema from "@/components/Schema";
+import MetaTag from "@/components/MetaTag";
+import Spacer from "@/components/Spacer";
+import ProgressBar from "@/components/ProgressBar";
 
 // Store contentful API keys into a client variable
 const client = createClient({
@@ -61,19 +60,11 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export const Slug = ({ blog }: { blog: any }) => {
-  console.log("blog", blog);
   if (!blog) return <Skeleton />;
 
-  const {
-    title,
-    articleNormalText,
-    slug,
-    thumbnail,
-    description,
-    metaDescription,
-    category,
-  } = blog.fields;
-  const thumbnailUrl = thumbnail.fields.file.url;
+  const { title, article, slug, img, description, metaDescription, category } =
+    blog.fields;
+  const imgUrl = img.fields.file.url;
   const date = blog.sys.updatedAt;
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
@@ -84,40 +75,39 @@ export const Slug = ({ blog }: { blog: any }) => {
       <Schema
         title={title}
         date={date}
-        image={`https:${thumbnailUrl}`}
-        articleBody={articleNormalText}
+        image={`https:${imgUrl}`}
+        articleBody={article}
         description={metaDescription}
       />
       <MetaTag
-        title={title + " | melenti"}
+        title={title + " | Briceno"}
         description={metaDescription}
         url={undefined + slug}
-        image={"https:" + thumbnailUrl}
+        image={"https:" + imgUrl}
       />
       <article>
         <h1 className="mt-4 header-medium lg:header azul">{title}</h1>
         <h3 className="description azul my-4">{description}</h3>
-        <Stack direction={["column", "row"]}>
-          <div className="lg:pr-6">
-            <Logo />
-          </div>
-          <span className="bg-gris shadow-xl rounded-full header-tiny text-white px-4 py-2 flex items-center justify-center">
-            {category}
-          </span>
-          <span className="copy-tiny gris pt-2 lg:pl-6">
-            Última actualización el {localDate}
-          </span>
-        </Stack>
+
+        <div className="lg:pr-6">
+          <img src="/logo.svg" />
+        </div>
+        <span className="bg-gris shadow-xl rounded-full header-tiny text-white px-4 py-2 flex items-center justify-center">
+          {category}
+        </span>
+        <span className="copy-tiny gris pt-2 lg:pl-6">
+          Last update on {localDate}
+        </span>
         <Spacer size={24} />
         <Image
-          src={"https:" + thumbnailUrl}
+          src={"https:" + imgUrl}
           alt="Cover image"
-          className="object-cover h-[300px] w-full rounded-[22px]"
+          className="object-cover h-[300px] w-full rounded-[6px]"
           width={800}
           height={300}
         />
         <Spacer size={24} />
-        <ReactMarkdown className="markdown">{articleNormalText}</ReactMarkdown>
+        <ReactMarkdown className="markdown">{article}</ReactMarkdown>
         <ProgressBar />
       </article>
     </div>
