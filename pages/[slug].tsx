@@ -9,6 +9,7 @@ import Spacer from "@/components/Spacer";
 import ProgressBar from "@/components/ProgressBar";
 import { URL } from "@/config";
 import Link from "next/link";
+import BlogCard from "@/components/BlogCard";
 
 // Store contentful API keys into a client variable
 const client = createClient({
@@ -46,6 +47,8 @@ export async function getStaticProps({ params }: { params: any }) {
     "fields.slug": params.slug,
   });
 
+  const res = await client.getEntries({ content_type: "blog" });
+
   if (!items.length) {
     return {
       redirect: {
@@ -56,12 +59,12 @@ export async function getStaticProps({ params }: { params: any }) {
   }
 
   return {
-    props: { blog: items[0] },
+    props: { blog: items[0], blogs: res.items },
     revalidate: 1,
   };
 }
 
-export const Slug = ({ blog }: { blog: any }) => {
+export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   if (!blog) return <Skeleton />;
   console.log("blog", blog);
   const { title, article, slug, img, description, metaDescription, category } =
@@ -87,7 +90,7 @@ export const Slug = ({ blog }: { blog: any }) => {
         url={URL + slug}
         image={"https:" + imgUrl}
       />
-      <article>
+      <article className="mb-14">
         <h1 className="header">{title}</h1>
         <h3 className="copy my-8">{description}</h3>
         <section className="flex flex-wrap">
@@ -111,6 +114,27 @@ export const Slug = ({ blog }: { blog: any }) => {
         <ReactMarkdown className="markdown">{article}</ReactMarkdown>
         <ProgressBar />
       </article>
+
+      <p>It could also be of your interest</p>
+      <Spacer size={37} />
+
+      <div className="md:grid md:grid-cols-2 md:gap-8">
+        {blogs.map((entry: any) => {
+          const { title, slug, description } = entry.fields;
+          const img = entry?.fields.img.fields.file.url;
+          return title === blog.fields.title ? null : (
+            <div className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
+              <Link
+                key={entry?.sys.id}
+                href={slug}
+                className="justify-center items-center"
+              >
+                <BlogCard img={img} title={title} description={description} />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
