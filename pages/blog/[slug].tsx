@@ -72,7 +72,7 @@ export const Slug = ({ blog }: { blog: any }) => {
 
   return (
     <div className="pb-4">
-      <Schema
+      {/* <Schema
         title={title}
         date={date}
         image={`https:${imgUrl}`}
@@ -109,7 +109,7 @@ export const Slug = ({ blog }: { blog: any }) => {
         <Spacer size={24} />
         <ReactMarkdown className="markdown">{article}</ReactMarkdown>
         <ProgressBar />
-      </article>
+      </article> */}
     </div>
   );
 };
