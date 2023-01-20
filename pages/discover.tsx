@@ -32,6 +32,8 @@ const discover = ({ blogs }: { blogs: any }) => {
   const date = new Date();
   const image =
     "https://firebasestorage.googleapis.com/v0/b/juanbri-face-recognition.appspot.com/o/images%2Flogo.svg?alt=media&token=5662b932-40eb-4b11-b0bb-e4b40d9b48a6";
+  const blogDescription =
+    "Whether you're a developer, designer, entrepreneur or just curious about the digital world, I invite you to join me on this journey into the exciting and ever-evolving world of web development.";
   return (
     <>
       <Schema
@@ -49,9 +51,7 @@ const discover = ({ blogs }: { blogs: any }) => {
       />
       <h2 className="header">Blog</h2>
       <h3 className="copy mt-8 mb-12">
-        Whether you're a developer, designer, entrepreneur or just curious about
-        the digital world, I invite you to join me on this journey into the
-        exciting and ever-evolving world of web development.
+        {blogDescription.replaceAll("'", "&apos;")}
       </h3>
       <div className="lg:grid grid-cols-2 gap-8">
         {blogs?.map((article: any, i: any) => {
