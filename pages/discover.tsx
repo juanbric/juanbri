@@ -58,7 +58,7 @@ const discover = ({ blogs }: { blogs: any }) => {
           const { title, slug, description } = article?.fields;
           const img = article?.fields.img.fields.file.url;
           return (
-            <div className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
+            <div key={i} className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
               <Link
                 key={article?.sys.id}
                 href={slug}
