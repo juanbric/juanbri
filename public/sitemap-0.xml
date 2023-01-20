@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://juanbri.vercel.app</loc><lastmod>2023-01-19T20:34:24.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/discover</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/becoming-a-web-developer-challenges-opportunities</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/chasing-product-market-fit-developer</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/startup-world-as-a-junior-web-developer</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/tech-tricks-maximizing-seo-with-continuous-integration</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/building-online-presence-for-others-as-frontend-developer</loc><lastmod>2023-01-20T20:01:28.687Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

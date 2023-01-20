@@ -4,6 +4,7 @@ import MetaTag from "@/components/MetaTag";
 import Projects, { gigs } from "@/components/Projects";
 import Schema from "@/components/Schema";
 import Spacer from "@/components/Spacer";
+import { URL } from "@/config";
 
 export default function Home() {
   const bio =
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Schema title={title} date={date} image={image} description={bio} articleBody={undefined} />
-      <MetaTag title={title} description={bio} url={undefined} image={image} />
+      <MetaTag title={title} description={bio} url={URL} image={image} />
 
       {/* Header */}
       <section className="grid grid-cols-4 gap-4 items-center">
