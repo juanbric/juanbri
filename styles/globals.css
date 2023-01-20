@@ -44,6 +44,70 @@ main {
   opacity: 0.5;
 }
 
+/* Markdown */
+.markdown h2 {
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+.markdown h3 {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+.markdown p {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.64);
+  margin-bottom: 12px;
+}
+.markdown strong {
+  color: white;
+}
+.markdown a:hover {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.64);
+  text-underline-offset: 2px;
+}
+.markdown a {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.834);
+}
+.markdown img {
+  display: block;
+  margin: auto;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  border-radius: 22px;
+}
+.markdown li {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 16px;
+}
+.markdown ul {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.markdown li::before {
+  content: "-   ";
+  margin-right: 0.5em;
+}
+
+/* Colors */
 .red {
   background: #dd3f31;
 }
@@ -64,150 +128,10 @@ main {
   background: #0f0f10;
 }
 
+/* Utils */
 .shorten-p {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-}
-
-/* Grid system */
-/* Infinite set of responsive columns, good for section*/
-.basic-grid {
-  display: grid;
-  gap: 1rem;
-  /* min width 240px, max 1fr unit */
-  grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
-}
-
-/* Mosaic grid - for this don't use section*/
-.photo-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: 240px;
-}
-@media screen and (min-width: 600px) {
-  .card-tall {
-    grid-row: span 2 / auto;
-  }
-  .card-wide {
-    grid-column: span 2 / auto;
-  }
-}
-
-/* Animated grid */
-.animated-grid {
-  height: 86vh;
-  display: grid;
-  gap: 1rem;
-  grid-template-areas:
-    "1 2 3 4"
-    "5 x x 6"
-    "7 x x 8"
-    "9 10 11 12"
-    "9 10 11 12";
-  grid-template-rows: repeat(4, 25%);
-  grid-template-columns: 240px auto auto 240px;
-
-  --stagger-delay: 100ms;
-}
-
-@keyframes cardEntrance {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-    filter: hue-rotate(180deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
-  }
-}
-
-.card {
-  background-color: rgb(35, 243, 147);
-  animation: cardEntrance 700ms ease-out;
-  animation-fill-mode: backwards;
-}
-
-/* Curve between sections (best use  https://haikei.app/ and  https://www.shapedivider.app/ */
-.curve {
-  position: absolute;
-  height: 225px;
-  width: 100%;
-  bottom: 0;
-}
-
-.curve::before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  background-color: #202731;
-  transform: translate(85%, 60%);
-}
-
-.curve::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  background-color: #3c31dd;
-  transform: translate(-4%, 40%);
-  z-index: -1;
-}
-
-.bubble::after {
-  content: "";
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-  position: absolute;
-  bottom: 0;
-  height: 85%;
-  width: 100%;
-  background-color: #0f0f10;
-  z-index: -1;
-}
-.custom-shape-divider-bottom-1674070435 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1674070435 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 99px;
-}
-
-.custom-shape-divider-bottom-1674070435 .shape-fill {
-  fill: #cfcffc;
-}
-
-.spacer {
-  /* Needs to correspond to the ratio of the original img */
-  aspect-ratio: 960/300;
-  width: 100%;
-  background-repeat: no-repeate;
-  background-position: center;
-  background-size: cover;
-}
-
-.layer1 {
-  background-image: url(/layered-waves-haikei.svg);
-}
-
-.flip {
-  transform: rotate(180deg);
 }

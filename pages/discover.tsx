@@ -32,8 +32,6 @@ const discover = ({ blogs }: { blogs: any }) => {
   const date = new Date();
   const image =
     "https://firebasestorage.googleapis.com/v0/b/juanbri-face-recognition.appspot.com/o/images%2Flogo.svg?alt=media&token=5662b932-40eb-4b11-b0bb-e4b40d9b48a6";
-  const blogDescription =
-    "Whether you're a developer, designer, entrepreneur or just curious about the digital world, I invite you to join me on this journey into the exciting and ever-evolving world of web development.";
   return (
     <>
       <Schema
@@ -51,9 +49,11 @@ const discover = ({ blogs }: { blogs: any }) => {
       />
       <h2 className="header">Blog</h2>
       <h3 className="copy mt-8 mb-12">
-        {blogDescription.replaceAll("'", "&apos;")}
+        Whether you&apos;re a developer, designer, entrepreneur or just curious
+        about the digital world, I invite you to join me on this journey into
+        the exciting and ever-evolving world of web development.
       </h3>
-      <div className="lg:grid grid-cols-2 gap-8">
+      <div className="md:grid md:grid-cols-2 md:items-start gap-8 flex flex-col justify-center items-center">
         {blogs?.map((article: any, i: any) => {
           const { title, slug, description } = article?.fields;
           const img = article?.fields.img.fields.file.url;
@@ -61,7 +61,7 @@ const discover = ({ blogs }: { blogs: any }) => {
             <Link
               key={article?.sys.id}
               href={slug}
-              className="lg:col-span-1 hover:scale-110 transform-gpu ease-in-out duration-300 max-w-[250px] lg:w-auto"
+              className="md:col-span-1 flex flex-col justify-center items-center max-w-[200px]  lg:w-auto hover:scale-110 transform-gpu ease-in-out duration-300"
             >
               <BlogCard img={img} title={title} description={description} />
             </Link>
