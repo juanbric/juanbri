@@ -12,12 +12,12 @@ export default function Home() {
     "Briceno | Front End Developer | Las Palmas de Gran Canaria Spain";
   const date = new Date();
   const image =
-    "https://firebasestorage.googleapis.com/v0/b/juanbri-face-recognition.appspot.com/o/images%2Flogo.svg?alt=media&token=5662b932-40eb-4b11-b0bb-e4b40d9b48a6";
+    "https://raw.githubusercontent.com/juanbric/juanbri/4c7b00757f26bf07b75d8470ecc2fe5e54beb5de/public/logo.svg";
 
   return (
     <>
       <Schema title={title} date={date} image={image} description={bio} articleBody={undefined} />
-      <MetaTag title={title} description={bio} url={undefined} image={"https://firebasestorage.googleapis.com/v0/b/juanbri-face-recognition.appspot.com/o/images%2Flogo.svg?alt=media&token=5662b932-40eb-4b11-b0bb-e4b40d9b48a6"} />
+      <MetaTag title={title} description={bio} url={undefined} image={"https://raw.githubusercontent.com/juanbric/juanbri/4c7b00757f26bf07b75d8470ecc2fe5e54beb5de/public/logo.svg"} />
 
       {/* Header */}
       <section className="grid grid-cols-4 gap-4 items-center">
