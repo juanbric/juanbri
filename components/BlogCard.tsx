@@ -1,3 +1,5 @@
+import Spacer from "./Spacer";
+
 const BlogCard = ({
   img,
   title,
@@ -9,12 +11,14 @@ const BlogCard = ({
 }) => {
   return (
     <>
-      <img
-        src={img}
-        className="h-[150px] flex items-center justify-center self-center"
-      />
-      <h2 className="mb-2 mt-4">{title}</h2>
-      <h3 className="copy shorten-p">{description}</h3>
+      <img src={img} className="self-center md:self-start h-[150px]" />
+      <h2 className="mb-2 mt-4 text-center md:text-start md:self-start">
+        {title}
+      </h2>
+      <h3 className="copy shorten-p text-center md:text-start">
+        {description}
+      </h3>
+      <Spacer size={8} />
     </>
   );
 };
