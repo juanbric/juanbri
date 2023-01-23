@@ -13,7 +13,7 @@ export default function Home() {
     "Briceno | Front End Developer | Las Palmas de Gran Canaria Spain";
   const date = new Date();
   const image =
-    "https://svgshare.com/i/pdv.svg";
+    "https://svgshare.com/i/pjj.svg";
 
   return (
     <>
