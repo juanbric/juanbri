@@ -1,1 +1,1 @@
-export const URL = "https://juanbri.vercel.app/"
+export const URL = "https://www.juanbri.dev/"

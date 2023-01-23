@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://juanbri.vercel.app/
+Host: https://juanbri.dev
 
 # Sitemaps
-Sitemap: https://juanbri.vercel.app/sitemap.xml
+Sitemap: https://juanbri.dev/sitemap.xml
