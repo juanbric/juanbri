@@ -27,12 +27,12 @@ export default function Home() {
           <h2 className="header">Juan Pablo Briceno</h2>
           <h2 className="copy mt-1">Product-focused Front End Developer</h2>
           <a
-            href={"https://twitter.com/juanbrisol"}
+            href={"https://github.com/juanbric"}
             target="_blank"
             rel="noopener noreferrer"
             className="sub-copy hover:underline"
           >
-            @juanbrisol
+           Github @juanbric
           </a>
         </span>
       </section>
