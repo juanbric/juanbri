@@ -2,15 +2,6 @@ import Spacer from "./Spacer";
 
 export const gigs = [
   {
-    period: "Ongoing",
-    img: "/trovali.svg",
-    title: "Trovali",
-    workLink: "https://face-recognition-juanbri.vercel.app/",
-    description:
-      "Next.js app that uses AI facial recognition technology to detect and identify individuals in uploaded images. It includes user authentication and authorization, the ability to add extra information on the recognized and uploaded individuals, and a search function that allows users to search for individuals by name and tags.",
-    tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
-  },
-  {
     period: "2022 - Ongoing",
     img: "zentra.svg",
     title: "zentra dev",
@@ -18,6 +9,15 @@ export const gigs = [
     description:
       "A web development agency that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and ongoing maintenance and support.",
     tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
+  },
+  {
+    period: "Ongoing",
+    img: "/trovali.svg",
+    title: "Trovali",
+    workLink: "https://trovali.vercel.app/",
+    description:
+      "Next.js app that uses AI facial recognition technology to detect and identify individuals in uploaded images. It includes user authentication and authorization, the ability to add extra information on the recognized and uploaded individuals, and a search function that allows users to search for individuals by name and tags.",
+    tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
   },
   {
     period: "2023",
