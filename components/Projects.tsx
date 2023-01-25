@@ -22,8 +22,8 @@ export const gigs = [
   {
     period: "Ongoing",
     img: "/trovali.svg",
-    title: "Trovali",
-    workLink: "https://trovali.vercel.app/",
+    title: "Trovali app",
+    workLink: "https://face-recognition-juanbri.vercel.app/login",
     description:
       "Next.js app that uses AI facial recognition technology to detect and identify individuals in uploaded images. It includes user authentication and authorization, the ability to add extra information on the recognized and uploaded individuals, and a search function that allows users to search for individuals by name and tags.",
     tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
