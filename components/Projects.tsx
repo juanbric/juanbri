@@ -11,6 +11,15 @@ export const gigs = [
     tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
   },
   {
+    period: "2022",
+    img: "/soltype.svg",
+    title: "First Soltype app",
+    workLink: "https://legacy.soltype.io/#/",
+    description:
+      "First iteration of Soltype. The concept changed from an open platform where anyone could publish their writings as literary NFTs to the current version.",
+    tech: "React • TypeScript • TailwindCSS • Chakra UI",
+  },
+  {
     period: "Ongoing",
     img: "/trovali.svg",
     title: "Trovali",
