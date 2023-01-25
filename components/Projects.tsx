@@ -12,7 +12,7 @@ export const gigs = [
   },
   {
     period: "2022",
-    img: "/soltype.png",
+    img: "/soltype.svg",
     title: "First Soltype app",
     workLink: "https://legacy.soltype.io/#/",
     description:
