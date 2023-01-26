@@ -106,6 +106,9 @@ main {
   content: "-   ";
   margin-right: 0.5em;
 }
+.markdown pre {
+  margin-bottom: 12px;
+}
 
 /* Colors */
 .red {
