@@ -4,6 +4,8 @@ import Schema from "@/components/Schema";
 import Spacer from "@/components/Spacer";
 import { createClient } from "contentful";
 import Link from "next/link";
+import { useContext } from "react";
+import { ToggleContext } from "./_app";
 
 export async function getStaticProps() {
   // Store contentful API keys into a client variable
@@ -26,12 +28,14 @@ export async function getStaticProps() {
   };
 }
 
-const discover = ({ blogs }: { blogs: any }) => {
+const Discover = ({ blogs }: { blogs: any }) => {
   const description =
     "Join me on a journey into the exciting world of web development... where I'll reveal insider tips and tricks to take your skills to the next LEVEL and become ...";
   const title = "Blog | Briceno | Front End Developer";
   const date = new Date();
   const image = "https://svgshare.com/i/pdv.svg";
+  const toggleFromContext = useContext(ToggleContext);
+  const { isDarkMode } = toggleFromContext;
   return (
     <>
       <Schema
@@ -48,7 +52,7 @@ const discover = ({ blogs }: { blogs: any }) => {
         image={image}
       />
       <h2 className="header">Blog</h2>
-      <h3 className="copy mt-8 mb-12">
+      <h3 className={!isDarkMode ? "copy mt-8 mb-12" : "copy-light mt-8 mb-12"}>
         Whether you&apos;re a developer, designer, entrepreneur or just curious
         about the digital world, I invite you to join me on this journey into
         the exciting and ever-evolving world of web development.
@@ -74,4 +78,4 @@ const discover = ({ blogs }: { blogs: any }) => {
   );
 };
 
-export default discover;
+export default Discover;

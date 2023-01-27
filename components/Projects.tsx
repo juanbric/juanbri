@@ -1,3 +1,5 @@
+import { ToggleContext } from "@/pages/_app";
+import { useContext } from "react";
 import Spacer from "./Spacer";
 
 export const gigs = [
@@ -79,9 +81,11 @@ const Projects = ({
   description: any;
   tech: string;
 }) => {
+  const toggleFromContext = useContext(ToggleContext);
+  const { isDarkMode } = toggleFromContext;
   return (
     <div className="lg:grid lg:grid-cols-4">
-      <p className="copy mb-2">{period}</p>
+      <p className={!isDarkMode ? "copy mb-2" : "copy-light mb-2"}>{period}</p>
       <div className="lg:col-span-3">
         <img src={img} className="w-8 h-8 pb-1" />
         <h2 className="flex items-center">
@@ -105,7 +109,7 @@ const Projects = ({
             />
           </a>
         </h2>
-        <h3 className="copy my-2">{description}</h3>
+        <h3 className={!isDarkMode ? "copy my-2" : "copy-light my-2"}>{description}</h3>
         <h3 className="sub-copy">
           <div dangerouslySetInnerHTML={{ __html: tech }} />
         </h3>
