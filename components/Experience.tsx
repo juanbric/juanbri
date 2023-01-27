@@ -1,3 +1,5 @@
+import { ToggleContext } from "@/pages/_app";
+import { useContext } from "react";
 import Spacer from "./Spacer";
 
 export const careerPath = [
@@ -42,9 +44,12 @@ const Experience = ({
   description: string;
   tech: string;
 }) => {
+  const toggleFromContext = useContext(ToggleContext);
+  const { isDarkMode } = toggleFromContext;
+
   return (
     <div className="lg:grid lg:grid-cols-4">
-      <p className="copy">{period}</p>
+      <p className={!isDarkMode ? "copy" : "copy-light"}>{period}</p>
       <div className="lg:col-span-3">
         <h2 className="flex items-center">
           <a
@@ -67,7 +72,7 @@ const Experience = ({
             />
           </a>
         </h2>
-        <h3 className="copy my-2">{description}</h3>
+        <h3 className={!isDarkMode ? "copy my-2" : "copy-light my-2"}>{description}</h3>
         <h3 className="sub-copy">
           <div dangerouslySetInnerHTML={{ __html: tech }} />
         </h3>

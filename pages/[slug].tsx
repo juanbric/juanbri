@@ -10,6 +10,8 @@ import ProgressBar from "@/components/ProgressBar";
 import { URL } from "@/config";
 import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
+import { useContext } from "react";
+import { ToggleContext } from "./_app";
 
 // Store contentful API keys into a client variable
 const client = createClient({
@@ -74,6 +76,8 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
+  const toggleFromContext = useContext(ToggleContext);
+  const { isDarkMode } = toggleFromContext;
 
   return (
     <>
@@ -92,12 +96,12 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
       />
       <article className="mb-14">
         <h1 className="header">{title}</h1>
-        <h3 className="copy my-8">{description}</h3>
+        <h3 className={!isDarkMode ? "copy my-8" : "copy-light my-8"}>{description}</h3>
         <section className="flex flex-wrap">
           <div>
             <img src="/logo.svg" className="w-6 h-6 mb-4" />
           </div>
-          <Link className="hover:underline copy pl-2 md:pl-4 pr-6" href={"/"}>
+          <Link className={!isDarkMode ? "hover:underline copy pl-2 md:pl-4 pr-6" : "hover:underline copy-light pl-2 md:pl-4 pr-6"} href={"/"}>
             Juan Pablo Briceno
           </Link>
           <span className="sub-copy">Last update on {localDate}</span>
@@ -115,7 +119,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
         <ProgressBar />
       </article>
 
-      <p>It could also be of your interest</p>
+      <p className="font-bold">It could also be of your interest</p>
       <Spacer size={37} />
 
       <div className="md:grid md:grid-cols-2 md:gap-8">

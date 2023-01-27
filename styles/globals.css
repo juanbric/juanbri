@@ -34,7 +34,14 @@ main {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.64);
+  color: #ffffffa3;
+}
+
+.copy-light {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #202731;
 }
 
 .sub-copy {
@@ -63,7 +70,7 @@ main {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.64);
+  /* color: rgba(255, 255, 255, 0.64); */
   margin-bottom: 12px;
 }
 .markdown strong {
@@ -73,14 +80,14 @@ main {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.64);
+  color: rgba(125, 101, 244, 0.64);
   text-underline-offset: 2px;
 }
 .markdown a {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.834);
+  text-decoration: underline;
 }
 .markdown img {
   display: block;

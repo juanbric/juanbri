@@ -1,3 +1,6 @@
+import { ToggleContext } from "@/pages/_app";
+import { useContext } from "react";
+
 export const myStuff = [
   {
     platform: "Github",
@@ -30,9 +33,11 @@ const Links = ({
   link: any;
   userName: any;
 }) => {
+  const toggleFromContext = useContext(ToggleContext);
+  const { isDarkMode } = toggleFromContext;
   return (
     <div className="lg:grid lg:grid-cols-4 pb-4">
-      <p className="copy mt-1.5">{platform}</p>
+      <p className={!isDarkMode ? "copy mt-1.5" : "copy-light mt-1.5"}>{platform}</p>
       <h2 className="col-span-3 flex items-center">
         <a
           href={link}

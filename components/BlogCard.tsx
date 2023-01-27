@@ -1,3 +1,5 @@
+import { ToggleContext } from "@/pages/_app";
+import { useContext } from "react";
 import Spacer from "./Spacer";
 
 const BlogCard = ({
@@ -9,6 +11,9 @@ const BlogCard = ({
   title: any;
   description: any;
 }) => {
+  const toggleFromContext = useContext(ToggleContext);
+  const { isDarkMode } = toggleFromContext;
+  
   return (
     <>
       <img
@@ -18,7 +23,7 @@ const BlogCard = ({
         height={300}
       />
       <h2 className="mb-2 mt-4 text-start">{title}</h2>
-      <h3 className="copy shorten-p text-start">{description}</h3>
+      <h3 className={!isDarkMode ? "copy shorten-p text-start" : "copy-light shorten-p text-start"}>{description}</h3>
       <Spacer size={8} />
     </>
   );
