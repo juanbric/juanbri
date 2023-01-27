@@ -28,7 +28,7 @@ export async function getStaticProps() {
   };
 }
 
-const discover = ({ blogs }: { blogs: any }) => {
+const Discover = ({ blogs }: { blogs: any }) => {
   const description =
     "Join me on a journey into the exciting world of web development... where I'll reveal insider tips and tricks to take your skills to the next LEVEL and become ...";
   const title = "Blog | Briceno | Front End Developer";
@@ -78,4 +78,4 @@ const discover = ({ blogs }: { blogs: any }) => {
   );
 };
 
-export default discover;
+export default Discover;
