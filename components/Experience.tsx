@@ -12,7 +12,7 @@ export const careerPath = [
     • TailwindCSS`,
   },
   {
-    period: "2019 - current",
+    period: "2021 - current",
     title: "Front End Engineer – Freelance",
     workLink: "https://www.zentradev.vercel.app/",
     description:
