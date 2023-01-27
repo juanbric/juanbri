@@ -67,7 +67,9 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
+  const toggleFromContext = useContext(ToggleContext);
   console.log("blog", blog);
+  if (!blog) return <Skeleton />;
   const { title, article, slug, img, description, metaDescription, category } =
   blog.fields;
   const imgUrl = img.fields.file.url;
@@ -75,9 +77,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
-  const toggleFromContext = useContext(ToggleContext);
   const { isDarkMode } = toggleFromContext;
-  if (!blog) return <Skeleton />;
 
   return (
     <>
