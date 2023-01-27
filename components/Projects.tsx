@@ -2,13 +2,38 @@ import Spacer from "./Spacer";
 
 export const gigs = [
   {
-    period: "2022 - Ongoing",
-    img: "zentra.svg",
-    title: "zentra dev",
-    workLink: "https://www.zentradev.vercel.app/",
+    period: "Ongoing",
+    img: "/trovali.svg",
+    title: "Trovali app",
+    workLink: "https://face-recognition-juanbri.vercel.app/login",
+    description: (
+      <>
+        Next.js app that uses AI facial recognition technology to detect and
+        identify individuals in uploaded images. It includes user authentication
+        and authorization, the ability to add extra information on the
+        recognized and uploaded individuals, and a search function that allows
+        users to search for individuals by name and tags. If you want to see the
+        presentation website of this app, also created by me, go to{"  "}
+        <a
+          href="https://trovali.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mr-2 mt-1 hover:underline hover:text-[#3c31dd]"
+        >
+          here
+        </a>
+      </>
+    ),
+    tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
+  },
+  {
+    period: "Ongoing",
+    img: "/qr.svg",
+    title: "QR Photo App",
+    workLink: "https://face-recognition-juanbri.vercel.app/login",
     description:
-      "A web development agency that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and ongoing maintenance and support.",
-    tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
+      "App that generates a unique QR code per every photo uploaded. The QR directs the user to a dynamic URL with getStaticPaths and getStaticProps where the uploaded picture is contained.",
+    tech: `React • Next.js • Firebase Storage • CI/CD • Git • TailwindCSS`,
   },
   {
     period: "2022",
@@ -16,17 +41,17 @@ export const gigs = [
     title: "First Soltype app",
     workLink: "https://legacy.soltype.io/#/",
     description:
-      "First iteration of Soltype. The concept changed from an open platform where anyone could publish their writings as literary NFTs to the current version.",
+      "First iteration of Soltype. This initial Soltype version consisted on an open platform where anyone could publish their writings as literary NFTs and where anyone could read and trade the works published by others. Check it out!.",
     tech: "React • TypeScript • TailwindCSS • Chakra UI",
   },
   {
-    period: "Ongoing",
-    img: "/trovali.svg",
-    title: "Trovali app",
-    workLink: "https://face-recognition-juanbri.vercel.app/login",
+    period: "2022 - Ongoing",
+    img: "zentra.svg",
+    title: "zentra dev",
+    workLink: "https://www.zentradev.vercel.app/",
     description:
-      "Next.js app that uses AI facial recognition technology to detect and identify individuals in uploaded images. It includes user authentication and authorization, the ability to add extra information on the recognized and uploaded individuals, and a search function that allows users to search for individuals by name and tags.",
-    tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
+      "A web development agency website that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and IT Consulting.",
+    tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
   },
   {
     period: "2023",
@@ -34,7 +59,7 @@ export const gigs = [
     title: "Blog about Mental Health",
     workLink: "https://www.melenti.vercel.app/",
     description:
-      "Blog about mental health and emotional wellbeing in Spanish. All it's infraestructure has been optminized for SEO, including sitemap, schemas, onsite SEO, copy writing, keyword analysis and more.",
+      "Blog about mental health and emotional wellbeing in Spanish. All it's infraestructure has been optminized for SEO, including sitemap, schemas, onsite SEO, copy writing, keyword analysis and more. This is WIP",
     tech: "React • Next.js • TypeScript • Contentful • Email-js • TailwindCSS • Chakra UI",
   },
 ];
@@ -51,7 +76,7 @@ const Projects = ({
   title: string;
   img: string;
   workLink: any;
-  description: string;
+  description: any;
   tech: string;
 }) => {
   return (
