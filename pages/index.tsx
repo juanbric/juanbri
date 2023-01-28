@@ -13,9 +13,10 @@ export default function Home() {
   const { isDarkMode } = toggleFromContext;
 
   const bio =
-    "GM. I'm Juan, a passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping and constantly learning.";
-  const title =
+    "GM. I'm Juan, a passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping and constantly learning.";
+    const title =
     "Briceno | Front End Developer | Las Palmas de Gran Canaria Spain";
+  const description = "A passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping and constantly learning."
   const date = new Date();
   const image = "https://i.ibb.co/C8cvD7z/Group-2.png";
 
@@ -25,14 +26,14 @@ export default function Home() {
         title={title}
         date={date}
         image={image}
-        description={bio}
+        description={description}
         articleBody={undefined}
       />
-      <MetaTag title={title} description={bio} url={URL} image={image} />
+      <MetaTag title={title} description={description} url={URL} image={image} />
 
       {/* Header */}
       <section className="grid grid-cols-4 gap-4 items-center">
-        <img src="/juan.png" className="w-auto rounded-full" />
+        <img src="/juan.png" className="w-auto rounded-full shadow-xl" />
         <span className="col-span-3">
           <h2 className="header">Juan Pablo Briceno</h2>
           <h2 className={!isDarkMode ? "copy mt-1" : "copy-light mt-1"}>
