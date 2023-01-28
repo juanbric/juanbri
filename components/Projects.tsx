@@ -105,7 +105,7 @@ const Projects = ({
           >
             <img
               src={!isDarkMode ? "/arrow.svg" : "/arrow-black.svg"}
-              className="w-[14px] h-[14px] transform rotate-[20deg]"
+              className={!isDarkMode ? "w-[14px] h-[14px] transform rotate-[20deg]" : "w-[10px] h-[10px] ml-0.5 transform rotate-[20deg]"}
             />
           </a>
         </h2>
