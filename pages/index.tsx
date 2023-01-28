@@ -197,8 +197,8 @@ export default function Home() {
 
       {/* CV */}
       <section>
-        <h2>{isSpanish ? "Experiencia de trabajo" : "Work Experience"}</h2>
-        <Spacer size={35} />
+        <p>{isSpanish ? "Experiencia de trabajo" : "Work Experience"}</p>
+        <Spacer size={15} />
         {careerPath.map((experience, i) => {
           return (
             <Experience
@@ -216,8 +216,8 @@ export default function Home() {
 
       {/* Side Projects */}
       <section>
-        <h2>{isSpanish ? "Proyectos paralelos" : "Side Projects"}</h2>
-        <Spacer size={35} />
+        <p>{isSpanish ? "Proyectos paralelos" : "Side Projects"}</p>
+        <Spacer size={15} />
         {gigs.map((project, i) => {
           return (
             <Projects
@@ -234,8 +234,8 @@ export default function Home() {
       </section>
 
       <section>
-        <h2>{isSpanish ? "Enlaces" : "Links"}</h2>
-        <Spacer size={35} />
+        <p>{isSpanish ? "Enlaces" : "Links"}</p>
+        <Spacer size={15} />
         {myStuff.map((stuff, i) => {
           return (
             <Links

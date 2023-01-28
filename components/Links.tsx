@@ -54,8 +54,8 @@ const Links = ({
           className="mt-1.5"
         >
           <img
-            src="/arrow.svg"
-            className="w-[14px] h-[14px] transform rotate-[20deg]"
+            src={!isDarkMode ? "/arrow.svg" : "/arrow-black.svg"}
+            className={!isDarkMode ? "w-[14px] h-[14px] transform rotate-[20deg]" : "w-[10px] h-[10px] ml-0.5 transform rotate-[20deg]"}
           />
         </a>
       </h2>

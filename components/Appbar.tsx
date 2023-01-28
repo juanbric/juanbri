@@ -12,7 +12,7 @@ const Appbar = () => {
         className="hover:scale-110 transform-gpu ease-in-out duration-300 rounded-full"
         href={"/"}
       >
-        <img src="/logo.svg" className="w-[32px] h-[32px] shadow-lg  " />
+        <img src="/logo.svg" className="w-[32px] h-[32px]" />
       </Link>
       <div className="flex items-center justify-center gap-6">
         <label className="relative inline-flex items-center cursor-pointer ">
