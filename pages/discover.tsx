@@ -56,7 +56,7 @@ const Discover = ({ blogs }: { blogs: any }) => {
       <h3 className={!isDarkMode ? "copy mt-8 mb-12" : "copy-light mt-8 mb-12"}>
         {isSpanish
           ? "Bien seas un desarrollador web, diseñador, emprendedor o simplemente tengas curiosidad por el mundo digital, te invito a que te unas en este viaje hacia el emocionante y dinámico mundo del desarrollo web"
-          : "Whether you&apos;re a developer, designer, entrepreneur or just curious about the digital world, I invite you to join me on this journey into the exciting and ever-evolving world of web development."}
+          : "Whether you're a developer, designer, entrepreneur or just curious about the digital world, I invite you to join me on this journey into the exciting and ever-evolving world of web development."}
       </h3>
       <div className="md:grid md:grid-cols-2 md:gap-8">
         {blogs?.map((article: any, i: any) => {
