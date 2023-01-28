@@ -2,35 +2,6 @@ import { ToggleContext } from "@/pages/_app";
 import { useContext } from "react";
 import Spacer from "./Spacer";
 
-export const careerPath = [
-  {
-    period: "2021 - current",
-    title: "Front End Lead & Cofounder – Soltype",
-    workLink: "https://www.soltype.io/",
-    description:
-      "Led a team of 3 engineers to develop our web3 creator tools and eBook NFT app. Worked closely with the CTO to build our tactical objectives and improve both our technical directions and shipping frequency.",
-    tech: `React • NextJS • RESTFUL API • CI/CD • Jira • Git • 
-    <a href="https://www.metaplex.io/" target="_blank" rel="noopener noreferrer" className="hover:underline">Metaplex</a> 
-    • TailwindCSS`,
-  },
-  {
-    period: "2021 - current",
-    title: "Front End Engineer – Freelance",
-    workLink: "https://www.zentradev.vercel.app/",
-    description:
-      "Worked with a range of agencies, start-ups and individuals to build products. Clients included well known Photographers, local Schools, and Kitchen Consultants.",
-    tech: "React • NextJS • TypeScript • Contentful • TailwindCSS • Chakra UI",
-  },
-  {
-    period: "2020 - 2021",
-    title: "Tech Talent Acquisition Consultant - EBC",
-    workLink: "https://www.ethosbc.com/",
-    description:
-      "International full-cycle technical recruiting experience, with a deep understanding of global recruitment practices and the ability to source, engage, and activate passive candidates",
-    tech: "SalesForce • SmartRecruiters • Pocket Recruiter • Bullhorn",
-  },
-];
-
 const Experience = ({
   period,
   title,

@@ -8,16 +8,24 @@ export const ToggleContext = createContext<any>({});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSpanish, setIsSpanish] = useState(false);
 
   function toggleDarkMode() {
     setIsDarkMode(!isDarkMode);
   }
+
+  function toggleSpanish() {
+    setIsSpanish(!isSpanish);
+  }
+
   return (
     <>
       <ToggleContext.Provider
         value={{
           toggleDarkMode,
+          toggleSpanish,
           isDarkMode,
+          isSpanish,
         }}
       >
         <Layout>
