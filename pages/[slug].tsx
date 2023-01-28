@@ -138,7 +138,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
       <Spacer size={37} />
 
       <div className="md:grid md:grid-cols-2 md:gap-8">
-        {blogs.map((entry: any) => {
+        {blogs.slice(0, 7).map((entry: any) => {
           const { title, slug, description } = entry.fields;
           const img = entry?.fields.img.fields.file.url;
           return title === blog.fields.title ? null : (
