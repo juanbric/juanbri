@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
 import Layout from "@/components/Layout";
 import { createContext, useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export const ToggleContext = createContext<any>({});
 
@@ -20,18 +21,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <ToggleContext.Provider
-        value={{
-          toggleDarkMode,
-          toggleSpanish,
-          isDarkMode,
-          isSpanish,
-        }}
-      >
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ToggleContext.Provider>
+      <ChakraProvider>
+        <ToggleContext.Provider
+          value={{
+            toggleDarkMode,
+            toggleSpanish,
+            isDarkMode,
+            isSpanish,
+          }}
+        >
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ToggleContext.Provider>
+      </ChakraProvider>
       <Analytics />
     </>
   );

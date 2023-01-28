@@ -4,7 +4,8 @@ import { useContext } from "react";
 
 const Appbar = () => {
   const toggleFromContext = useContext(ToggleContext);
-  const { toggleDarkMode, isDarkMode, isSpanish, toggleSpanish } = toggleFromContext;
+  const { toggleDarkMode, isDarkMode, isSpanish, toggleSpanish } =
+    toggleFromContext;
   return (
     <div className="items-center justify-between flex p-3.5 sticky top-0 opacity-100 z-10">
       <Link
@@ -14,8 +15,7 @@ const Appbar = () => {
         <img src="/logo.svg" className="w-[32px] h-[32px] shadow-lg  " />
       </Link>
       <div className="flex items-center justify-center gap-6">
-
-      <label className="relative inline-flex items-center cursor-pointer ">
+        <label className="relative inline-flex items-center cursor-pointer ">
           <input
             type="checkbox"
             onClick={toggleSpanish}
@@ -28,8 +28,10 @@ const Appbar = () => {
               ) : (
                 <img src="" className="w-4 mt-1 " />
               )}
-              {!isSpanish? (
+              {!isSpanish && isDarkMode ? (
                 <img src="/es.svg" className="w-3 mt-[8px] mr-[6px]" />
+              ) : !isSpanish && !isDarkMode ? (
+                <img src="/es-black.svg" className="w-3 mt-[8px] mr-[6px]" />
               ) : (
                 <img src="" className="w-4 mt-1 " />
               )}
@@ -59,7 +61,11 @@ const Appbar = () => {
           </div>
         </label>
         <Link
-          className={!isDarkMode ? "bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300" : "bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300 text-white"}
+          className={
+            !isDarkMode
+              ? "bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300"
+              : "bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300 text-white"
+          }
           href={"/discover"}
         >
           {isSpanish ? "Descubre" : "Discover"}

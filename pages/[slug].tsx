@@ -12,6 +12,7 @@ import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
 import { useContext } from "react";
 import { ToggleContext } from "./_app";
+import { Tooltip, useClipboard, useToast } from "@chakra-ui/react";
 
 // Store contentful API keys into a client variable
 const client = createClient({
@@ -71,14 +72,16 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   console.log("blog", blog);
   if (!blog) return <Skeleton />;
   const { title, article, slug, img, description, metaDescription, category } =
-  blog.fields;
+    blog.fields;
   const imgUrl = img.fields.file.url;
   const date = blog.sys.updatedAt;
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
-  const { isDarkMode } = toggleFromContext;
-
+  const { isDarkMode, isSpanish } = toggleFromContext;
+  const link = "https://juanbri.dev/" + slug;
+  const { onCopy } = useClipboard(link);
+  const toast = useToast();
   return (
     <>
       <Schema
@@ -96,15 +99,54 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
       />
       <article className="mb-14">
         <h1 className="header">{title}</h1>
-        <h3 className={!isDarkMode ? "copy my-8" : "copy-light my-8"}>{description}</h3>
+        <h3 className={!isDarkMode ? "copy my-8" : "copy-light my-8"}>
+          {description}
+        </h3>
         <section className="flex flex-wrap">
           <div>
             <img src="/logo.svg" className="w-6 h-6 mb-4" />
           </div>
-          <Link className={!isDarkMode ? "hover:underline copy pl-2 md:pl-4 pr-6" : "hover:underline copy-light pl-2 md:pl-4 pr-6"} href={"/"}>
+          <Link
+            className={
+              !isDarkMode
+                ? "hover:underline copy pl-2 md:pl-4 pr-6"
+                : "hover:underline copy-light pl-2 md:pl-4 pr-6"
+            }
+            href={"/"}
+          >
             Juan Pablo Briceno
           </Link>
           <span className="sub-copy">Last update on {localDate}</span>
+          <span>
+            <Tooltip>
+              <button
+                className="outline-none"
+                onClick={() => {
+                  toast({
+                    render: () => (
+                      <div
+                        className={
+                          isDarkMode
+                            ? "bg-[white] shadow-xl flex text-center justify-center py-1 rounded-[6px]"
+                            : "bg-[#2f3742] shadow-xl flex text-center justify-center text-white py-1 rounded-[6px]"
+                        }
+                      >
+                        {isSpanish ? "Copiado" : `Copied`}
+                      </div>
+                    ),
+                    duration: 2000,
+                    isClosable: true,
+                  });
+                }}
+              >
+                <img
+                  onClick={onCopy}
+                  className="pl-4"
+                  src={!isDarkMode ? "/share-black.svg" : "/share.svg"}
+                />
+              </button>
+            </Tooltip>
+          </span>
         </section>
         <Spacer size={18} />
         <Image
