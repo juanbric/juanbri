@@ -13,6 +13,7 @@ import BlogCard from "@/components/BlogCard";
 import { useContext } from "react";
 import { ToggleContext } from "./_app";
 import { Tooltip, useClipboard, useToast } from "@chakra-ui/react";
+import CopyButton from "@/components/CopyButton";
 
 // Store contentful API keys into a client variable
 const client = createClient({
@@ -69,20 +70,16 @@ export async function getStaticProps({ params }: { params: any }) {
 
 export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   const toggleFromContext = useContext(ToggleContext);
-  console.log("blog", blog);
-  const toast = useToast();
-  let link = ''
-  const { onCopy } = useClipboard(link);
   if (!blog) return <Skeleton />;
   const { title, article, slug, img, description, metaDescription, category } =
-  blog.fields;
-  link = "https://juanbri.dev/" + slug;
+    blog.fields;
+  const link = "https://juanbri.dev/" + slug;
   const imgUrl = img.fields.file.url;
   const date = blog.sys.updatedAt;
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
-  const { isDarkMode, isSpanish } = toggleFromContext;
+  const { isDarkMode } = toggleFromContext;
   return (
     <>
       <Schema
@@ -120,32 +117,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
           <span className="sub-copy">Last update on {localDate}</span>
           <span>
             <Tooltip>
-              <button
-                className="outline-none"
-                onClick={() => {
-                  toast({
-                    render: () => (
-                      <div
-                        className={
-                          isDarkMode
-                            ? "border-l-4 border-l-[#3c31dd] bg-[white] shadow-xl flex text-center justify-center py-1 rounded-[6px]"
-                            : "border-l-4 border-l-[#3c31dd] bg-[#2f3742] shadow-xl flex text-center justify-center text-white py-1 rounded-[6px]"
-                        }
-                      >
-                        {isSpanish ? "Copiado" : `Copied`}
-                      </div>
-                    ),
-                    duration: 3000,
-                    isClosable: true,
-                  });
-                }}
-              >
-                <img
-                  onClick={onCopy}
-                  className="pl-4"
-                  src={!isDarkMode ? "/share-black.svg" : "/share.svg"}
-                />
-              </button>
+              <CopyButton link={link} />
             </Tooltip>
           </span>
         </section>

@@ -23,20 +23,17 @@ const Appbar = () => {
           />
           <div className="outline-none w-11 h-6 bg-[#ffffffa3] rounded-full dark:peer-focus:ring-blue-800 dark:bg-[gray-700] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[#ffffffa3] after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#3c31dd]">
             <div className="flex gap-1 ml-[6.5px]">
+              {isSpanish ? (
+                <img src="/en.svg" className="w-3 mt-[8.5px] ml-[0.5px]" />
+              ) : null}
+
               {!isSpanish && !isDarkMode ? (
-                <img src="/en.svg" className="w-3 mt-[8.5px] ml-[0.5px]" />
-              ) : !isSpanish && isDarkMode ? (
-                <img src="/en.svg" className="w-3 mt-[8.5px] ml-[0.5px]" />
-              ) : (
-                <img src="" className="w-4 mt-1 " />
-              )}
-              {isSpanish && !isDarkMode ? (
-                <img src="/es-black.svg" className="w-3 mt-[8px] mr-[6px]" />
-              ) : isSpanish && isDarkMode ? (
-                <img src="/es.svg" className="w-3 mt-[8px] mr-[6px]" />
-              ) : (
-                <img src="" className="w-4 mt-1 " />
-              )}
+                <img src="/es-black.svg" className="w-3 mt-[8.5px] ml-[20px]" />
+              ) : null}
+
+              {!isSpanish && isDarkMode ? (
+                <img src="/es.svg" className="w-3 mt-[8.5px] ml-[20px]" />
+              ) : null}
             </div>
           </div>
         </label>
