@@ -68,19 +68,21 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
+  const toggleFromContext = useContext(ToggleContext);
+  console.log("blog", blog);
   const toast = useToast();
+  let link = ''
+  const { onCopy } = useClipboard(link);
+  if (!blog) return <Skeleton />;
   const { title, article, slug, img, description, metaDescription, category } =
   blog.fields;
+  link = "https://juanbri.dev/" + slug;
   const imgUrl = img.fields.file.url;
   const date = blog.sys.updatedAt;
   const options = { year: "numeric", month: "short", day: "numeric" };
-  const link = "https://juanbri.dev/" + slug;
-  const toggleFromContext = useContext(ToggleContext);
-  const { onCopy } = useClipboard(link);
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
   const { isDarkMode, isSpanish } = toggleFromContext;
-  if (!blog) return <Skeleton />;
   return (
     <>
       <Schema
