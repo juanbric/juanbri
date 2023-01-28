@@ -22,7 +22,7 @@ export const gigs = [
           rel="noopener noreferrer"
           className="mr-2 mt-1 hover:underline hover:text-[#3c31dd]"
         >
-          here
+          https://trovali.vercel.app.
         </a>
       </>
     ),
@@ -104,8 +104,8 @@ const Projects = ({
             className="mt-1.5"
           >
             <img
-              src="/arrow.svg"
-              className="w-[14px] h-[14px] transform rotate-[20deg]"
+              src={!isDarkMode ? "/arrow.svg" : "/arrow-black.svg"}
+              className={!isDarkMode ? "w-[14px] h-[14px] transform rotate-[20deg]" : "w-[10px] h-[10px] ml-0.5 transform rotate-[20deg]"}
             />
           </a>
         </h2>
