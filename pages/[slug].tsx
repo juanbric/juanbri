@@ -68,20 +68,19 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
-  const toggleFromContext = useContext(ToggleContext);
-  console.log("blog", blog);
-  if (!blog) return <Skeleton />;
+  const toast = useToast();
   const { title, article, slug, img, description, metaDescription, category } =
-    blog.fields;
+  blog.fields;
   const imgUrl = img.fields.file.url;
   const date = blog.sys.updatedAt;
   const options = { year: "numeric", month: "short", day: "numeric" };
+  const link = "https://juanbri.dev/" + slug;
+  const toggleFromContext = useContext(ToggleContext);
+  const { onCopy } = useClipboard(link);
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
   const { isDarkMode, isSpanish } = toggleFromContext;
-  const link = "https://juanbri.dev/" + slug;
-  const { onCopy } = useClipboard(link);
-  const toast = useToast();
+  if (!blog) return <Skeleton />;
   return (
     <>
       <Schema
@@ -109,8 +108,8 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
           <Link
             className={
               !isDarkMode
-                ? "hover:underline copy pl-2 md:pl-4 pr-6"
-                : "hover:underline copy-light pl-2 md:pl-4 pr-6"
+                ? "hover:underline copy pl-2 md:pl-2 pr-6"
+                : "hover:underline copy-light pl-2 md:pl-2 pr-6"
             }
             href={"/"}
           >
@@ -127,14 +126,14 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
                       <div
                         className={
                           isDarkMode
-                            ? "bg-[white] shadow-xl flex text-center justify-center py-1 rounded-[6px]"
-                            : "bg-[#2f3742] shadow-xl flex text-center justify-center text-white py-1 rounded-[6px]"
+                            ? "border-l-4 border-l-[#3c31dd] bg-[white] shadow-xl flex text-center justify-center py-1 rounded-[6px]"
+                            : "border-l-4 border-l-[#3c31dd] bg-[#2f3742] shadow-xl flex text-center justify-center text-white py-1 rounded-[6px]"
                         }
                       >
                         {isSpanish ? "Copiado" : `Copied`}
                       </div>
                     ),
-                    duration: 2000,
+                    duration: 3000,
                     isClosable: true,
                   });
                 }}

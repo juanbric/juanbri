@@ -73,9 +73,7 @@ main {
   /* color: rgba(255, 255, 255, 0.64); */
   margin-bottom: 12px;
 }
-.markdown strong {
-  color: white;
-}
+
 .markdown a:hover {
   line-height: 21px;
   font-size: 14px;
@@ -97,11 +95,10 @@ main {
   border-radius: 22px;
 }
 .markdown li {
-  line-height: 21px;
+  line-height: 22px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.64);
-  margin-top: 6px;
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 16px;
 }
@@ -110,7 +107,7 @@ main {
   margin-bottom: 12px;
 }
 .markdown li::before {
-  content: "-   ";
+  content: "•";
   margin-right: 0.5em;
 }
 .markdown pre {
