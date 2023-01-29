@@ -26,6 +26,7 @@ export const MetaTag = ({
       <meta name="creator" content="Juan Pablo Briceno" />
       <link rel="icon" href="https://svgshare.com/i/pdv.svg" />
       <meta name="publisher" content="Juan Pablo Briceno (juanbri.dev)" />
+      <meta name="author" content="Juan Pablo Briceno (juanbri.dev)" />
       <meta http-equiv="content-language" content="en" />
       <meta
         name="classification"
