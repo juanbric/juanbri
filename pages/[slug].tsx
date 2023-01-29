@@ -139,12 +139,12 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
 
       <div className="md:grid md:grid-cols-2 md:gap-8">
         {blogs
-          .slice(0, 7)
-          .filter((entry:any) =>
+          .filter((entry: any) =>
             !isSpanish
               ? entry.fields.language === "en"
               : entry.fields.language === "es"
           )
+          .slice(0, 7)
           .map((entry: any) => {
             const { title, slug, description } = entry.fields;
             const img = entry?.fields.img.fields.file.url;
