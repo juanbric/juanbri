@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://juanbri.dev</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/discover</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/gaining-clients-junior-front-end-developer-starting-small</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/from-recruitment-to-front-end-my-journey-into-web-development</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/mastering-css-grid-a-comprehensive-guide</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/career-change-why-front-end-development</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/technical-seo-front-end-developers-optimize-speed-and-mobile</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/becoming-a-web-developer-challenges-opportunities</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/chasing-product-market-fit-developer</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/startup-world-as-a-junior-web-developer</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/tech-tricks-maximizing-seo-with-continuous-integration</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://juanbri.dev/building-online-presence-for-others-as-frontend-developer</loc><lastmod>2023-01-28T16:01:08.022Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/discover</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/convertirse-en-desarrollador-web-lo-bueno-y-lo-malo</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/del-reclutamiento-tech-al-desarrollo-front-end-mi-experiencia</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/poquito-a-poco-gana-clientes-desarrollador-junior-front-end</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/aumenta-presencia-online-desarrollador-front-end</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/building-online-presence-for-others-as-frontend-developer</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/gaining-clients-junior-front-end-developer-starting-small</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/from-recruitment-to-front-end-my-journey-into-web-development</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/mastering-css-grid-a-comprehensive-guide</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/career-change-why-front-end-development</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/technical-seo-front-end-developers-optimize-speed-and-mobile</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/becoming-a-web-developer-challenges-opportunities</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/chasing-product-market-fit-developer</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/startup-world-as-a-junior-web-developer</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://juanbri.dev/tech-tricks-maximizing-seo-with-continuous-integration</loc><lastmod>2023-01-29T11:46:12.878Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
