@@ -60,21 +60,30 @@ const Discover = ({ blogs }: { blogs: any }) => {
       </h3>
       <div className="md:grid md:grid-cols-2 md:gap-8">
         {blogs?.map((article: any, i: any) => {
-          const { title, slug, description } = article?.fields;
+          const { title, slug, description, language } = article?.fields;
           const img = article?.fields.img.fields.file.url;
           return (
-            <div
-              key={i}
-              className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300"
-            >
-              <Link
-                key={article?.sys.id}
-                href={slug}
-                className="justify-center items-center"
-              >
-                <BlogCard img={img} title={title} description={description} />
-              </Link>
-            </div>
+            <>
+              {(isSpanish && language === "es") ||
+              (!isSpanish && language === "en") ? (
+                <div
+                  key={i}
+                  className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300"
+                >
+                  <Link
+                    key={article?.sys.id}
+                    href={slug}
+                    className="justify-center items-center"
+                  >
+                    <BlogCard
+                      img={img}
+                      title={title}
+                      description={description}
+                    />
+                  </Link>
+                </div>
+              ) : null}
+            </>
           );
         })}
       </div>
