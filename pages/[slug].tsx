@@ -79,7 +79,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
-  const { isDarkMode } = toggleFromContext;
+  const { isDarkMode, isSpanish } = toggleFromContext;
   return (
     <>
       <Schema
@@ -90,7 +90,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
         description={metaDescription}
       />
       <MetaTag
-        title={title + " | Briceno"}
+        title={title}
         description={metaDescription}
         url={URL + slug}
         image={"https:" + imgUrl}
@@ -138,21 +138,28 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
       <Spacer size={37} />
 
       <div className="md:grid md:grid-cols-2 md:gap-8">
-        {blogs.slice(0, 7).map((entry: any) => {
-          const { title, slug, description } = entry.fields;
-          const img = entry?.fields.img.fields.file.url;
-          return title === blog.fields.title ? null : (
-            <div className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
-              <Link
-                key={entry?.sys.id}
-                href={slug}
-                className="justify-center items-center"
-              >
-                <BlogCard img={img} title={title} description={description} />
-              </Link>
-            </div>
-          );
-        })}
+        {blogs
+          .slice(0, 7)
+          .filter((entry:any) =>
+            !isSpanish
+              ? entry.fields.language === "en"
+              : entry.fields.language === "es"
+          )
+          .map((entry: any) => {
+            const { title, slug, description } = entry.fields;
+            const img = entry?.fields.img.fields.file.url;
+            return title === blog.fields.title ? null : (
+              <div className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
+                <Link
+                  key={entry?.sys.id}
+                  href={slug}
+                  className="justify-center items-center"
+                >
+                  <BlogCard img={img} title={title} description={description} />
+                </Link>
+              </div>
+            );
+          })}
       </div>
     </>
   );
