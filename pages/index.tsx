@@ -109,7 +109,7 @@ export default function Home() {
       period: isSpanish ? "En curso" : "Ongoing",
       img: "/qr.svg",
       title: "QR Photo App",
-      workLink: "https://face-recognition-juanbri.vercel.app/login",
+      workLink: "https://qr-photo-app.vercel.app/",
       description: isSpanish
         ? "Aplicación que genera un código QR único por cada foto subida. El QR dirige al usuario a una URL dinámica con getStaticPaths y getStaticProps donde se encuentra la imagen cargada."
         : "App that generates a unique QR code per every photo uploaded. The QR directs the user to a dynamic URL with getStaticPaths and getStaticProps where the uploaded picture is contained.",
@@ -129,7 +129,7 @@ export default function Home() {
       period: isSpanish ? "En curso" : "Ongoing",
       img: "zentra.svg",
       title: "zentra dev",
-      workLink: "https://www.zentradev.vercel.app/",
+      workLink: "https://zentradev.vercel.app/",
       description: isSpanish
         ? "Un sitio web de una agencia de desarrollo web que se especializa en crear sitios web y aplicaciones centrados en el usuario, con un enfoque en la utilización de técnicas efectivas de SEO para mejorar presencia en línea. Los servicios incluyen diseño y desarrollo de sitios y aplicaciones web, optimización de motores de búsqueda y consultoría de TI. "
         : "A web development agency website that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and IT Consulting.",
