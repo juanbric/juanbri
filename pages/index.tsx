@@ -109,7 +109,7 @@ export default function Home() {
       period: isSpanish ? "En curso" : "Ongoing",
       img: "/qr.svg",
       title: "QR Photo App",
-      workLink: "https://face-recognition-juanbri.vercel.app/login",
+      workLink: "https://qr-photo-app.vercel.app/",
       description: isSpanish
         ? "Aplicación que genera un código QR único por cada foto subida. El QR dirige al usuario a una URL dinámica con getStaticPaths y getStaticProps donde se encuentra la imagen cargada."
         : "App that generates a unique QR code per every photo uploaded. The QR directs the user to a dynamic URL with getStaticPaths and getStaticProps where the uploaded picture is contained.",
