@@ -33,6 +33,24 @@ main {
   font-weight: 300;
 }
 
+.sub-title {
+  line-height: 28px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.sub-sub-title {
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.blog-card-title {
+  line-height: 26px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
 .header {
   line-height: 26px;
   font-size: 22px;
@@ -40,8 +58,6 @@ main {
 }
 
 .copy {
-  line-height: 21px;
-  font-size: 14px;
   font-weight: 400;
   color: #ffffffa3;
 }
@@ -190,7 +206,14 @@ main {
 .shorten-p {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.shorten-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 

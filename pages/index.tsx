@@ -1,16 +1,16 @@
-import BlogCard from "@/components/BlogCard";
-import Experience from "@/components/Experience";
-import Links, { myStuff } from "@/components/Links";
 import MetaTag from "@/components/MetaTag";
 import Projects from "@/components/Projects";
 import Schema from "@/components/Schema";
-import Skeleton from "@/components/Skeleton";
 import Spacer from "@/components/Spacer";
 import { URL } from "@/config";
 import { createClient } from "contentful";
-import Link from "next/link";
 import { useContext } from "react";
 import { ToggleContext } from "./_app";
+import Banner from "@/components/Banner";
+import Resources from "@/components/Resources";
+import About from "@/components/About";
+import Portfolio from "@/components/Portfolio";
+import Footer from "@/components/Footer";
 
 export async function getStaticProps() {
   // Store contentful API keys into a client variable
@@ -46,11 +46,50 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
   const date = new Date();
   const image = "https://i.ibb.co/C8cvD7z/Group-2.png";
 
+  const myStuff = [
+    {
+      icon: "/twitter.svg",
+      link: "https://twitter.com/juanbrisol",
+    },
+    {
+      icon: "/linkedin.svg",
+      link: "https://www.linkedin.com/in/juanpablobriceno/",
+    },
+    {
+      icon: "/github.svg",
+      link: "https://github.com/juanbric",
+    },
+    {
+      icon: "/email.svg",
+      link: `mailto:juanbri@gmx.com?subject=Hey%20Juan%20%3A)`,
+    },
+  ];
+
   const gigs = [
     {
-      period: isSpanish ? "En curso" : "Ongoing",
+      img: "zentra.svg",
+      screenshot: "/zentra-app.png",
+      title: "Zentra Dev",
+      workLink: "https://zentradev.vercel.app/",
+      description: isSpanish
+        ? "Un sitio web de una agencia de desarrollo web que se especializa en crear sitios web y aplicaciones centrados en el usuario, con un enfoque en la utilización de técnicas efectivas de SEO para mejorar presencia en línea. Los servicios incluyen diseño y desarrollo de sitios y aplicaciones web, optimización de motores de búsqueda y consultoría de TI. "
+        : "A web development agency website that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and IT Consulting.",
+      tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
+    },
+    {
+      screenshot: "/soltype-app.png",
+      img: "/soltype.svg",
+      title: "Soltype",
+      workLink: "https://soltype.io",
+      description: isSpanish
+        ? "Primera iteración de Soltype. Esta versión inicial de consistía en una plataforma abierta donde cualquiera podía publicar sus escritos como NFT literarios y donde cualquiera podía leer e intercambiar los trabajos publicados por otros. ¡Echale un vistazo!"
+        : "Soltype is a NFT eBook marketplace where anyone can collect, read, and resell digital books. Soltype provides you with the tools to invest in literature and fund the stories and authors you love.",
+      tech: "React • TypeScript • TailwindCSS • Chakra UI",
+    },
+    {
       img: "/trovali.svg",
-      title: "Trovali app",
+      screenshot: "/trovali-app.png",
+      title: "Trovali",
       workLink: "https://face-recognition-juanbri.vercel.app/login",
       description: isSpanish ? (
         <>
@@ -92,8 +131,18 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       tech: `React • Next.js • Faceapi.js • Firebase Auth • Firebase Storage • RESTFUL API • CI/CD • Git • TailwindCSS`,
     },
     {
-      period: isSpanish ? "En curso" : "Ongoing",
+      img: "/melenti.svg",
+      title: "Melenti",
+      screenshot: "/melenti-app.png",
+      workLink: "https://www.melenti.vercel.app/",
+      description: isSpanish
+        ? "Blog sobre salud mental y bienestar emocional en español. Toda su infraestructura ha sido optimizada para SEO, incluyendo mapa del sitio, esquemas, SEO en el sitio, redacción de textos publicitarios, análisis de palabras clave y más. Esto es WIP."
+        : "Blog about mental health and emotional wellbeing in Spanish. All it's infraestructure has been optminized for SEO, including sitemap, schemas, onsite SEO, copy writing, keyword analysis and more. This is WIP.",
+      tech: "React • Next.js • TypeScript • Contentful • Email-js • TailwindCSS • Chakra UI",
+    },
+    {
       img: "/qr.svg",
+      screenshot: "/qr-app.png",
       title: "QR Photo App",
       workLink: "https://qr-photo-app.vercel.app/",
       description: isSpanish
@@ -102,34 +151,14 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       tech: `React • Next.js • Firebase Storage • CI/CD • Git • TailwindCSS`,
     },
     {
-      period: "2022",
+      screenshot: "/soltype-legacy-app.png",
       img: "/soltype.svg",
-      title: "First Soltype app",
+      title: "Soltype V1",
       workLink: "https://legacy.soltype.io/#/",
       description: isSpanish
         ? "Primera iteración de Soltype. Esta versión inicial de consistía en una plataforma abierta donde cualquiera podía publicar sus escritos como NFT literarios y donde cualquiera podía leer e intercambiar los trabajos publicados por otros. ¡Echale un vistazo!"
         : "First iteration of Soltype. This initial Soltype version consisted on an open platform where anyone could publish their writings as literary NFTs and where anyone could read and trade the works published by others. Check it out!.",
       tech: "React • TypeScript • TailwindCSS • Chakra UI",
-    },
-    {
-      period: isSpanish ? "En curso" : "Ongoing",
-      img: "zentra.svg",
-      title: "zentra dev",
-      workLink: "https://zentradev.vercel.app/",
-      description: isSpanish
-        ? "Un sitio web de una agencia de desarrollo web que se especializa en crear sitios web y aplicaciones centrados en el usuario, con un enfoque en la utilización de técnicas efectivas de SEO para mejorar presencia en línea. Los servicios incluyen diseño y desarrollo de sitios y aplicaciones web, optimización de motores de búsqueda y consultoría de TI. "
-        : "A web development agency website that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and IT Consulting.",
-      tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
-    },
-    {
-      period: isSpanish ? "En curso" : "Ongoing",
-      img: "/melenti.svg",
-      title: "Blog about Mental Health",
-      workLink: "https://www.melenti.vercel.app/",
-      description: isSpanish
-        ? "Blog sobre salud mental y bienestar emocional en español. Toda su infraestructura ha sido optimizada para SEO, incluyendo mapa del sitio, esquemas, SEO en el sitio, redacción de textos publicitarios, análisis de palabras clave y más. Esto es WIP."
-        : "Blog about mental health and emotional wellbeing in Spanish. All it's infraestructure has been optminized for SEO, including sitemap, schemas, onsite SEO, copy writing, keyword analysis and more. This is WIP.",
-      tech: "React • Next.js • TypeScript • Contentful • Email-js • TailwindCSS • Chakra UI",
     },
   ];
 
@@ -149,160 +178,23 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
         image={image}
       />
 
-      <section>
-        <div className="flex md:grid md:grid-cols-2">
-          <div className="">
-            <h1 className="title mb-4 md:mb-8">JUAN PABLO BRICENO</h1>
-            <h2 className="huge-title mb-4 md:mb-8">
-              Work Less. Earn More. Live fully.
-            </h2>
-            <p className="mb-6 md:mb-8">
-              <span className="font-bold">
-                Join 80,000+ getting mindf*cked every Saturday morning
-              </span>{" "}
-              while reading The Koe Letter (you’ll learn a bit about life &
-              business too.)
-            </p>
-            <div className="flex-row">
-              <input
-                type="email"
-                className="outline-none bg-transparent p-2 border-white border-b mr-5 max-w-[300px]"
-                placeholder="Your email"
-              />
-              <button className="mt-4 md:mt-0 bg-blue py-2 rounded-[2px] px-4 hover:text-second hover:bg-second">
-                Read for free
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Spacer size={150} />
-      <section className="">
-        <div className="md:text-center">
-          <p className="title mb-2">RESOURCES</p>
-          <h2 className="huge-title mb-2">Where Do I Start?</h2>
-          <h2 className="sub-title mb-[32px] md:mb-[62px]">
-            Gain clarity on your future, train your creativity, and learn a
-            recession proof skill.
-          </h2>
-        </div>
-        <div className="md:grid md:grid-cols-3 md:gap-8">
-          {blogs?.slice(0, 12).map((article: any, i: any) => {
-            const { title, slug, description, language } = article?.fields;
-            const img = article?.fields.img.fields.file.url;
-            return (
-              <>
-                {(isSpanish && language === "es") ||
-                (!isSpanish && language === "en") ? (
-                  <div
-                    key={i}
-                    className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300"
-                  >
-                    <Link
-                      key={article?.sys.id}
-                      href={slug}
-                      className="justify-center items-center"
-                    >
-                      <BlogCard
-                        img={img}
-                        title={title}
-                        description={description}
-                      />
-                    </Link>
-                  </div>
-                ) : null}
-              </>
-            );
-          })}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            href={"/discover"}
-            className="bg-blue py-2 rounded-[2px] px-4 hover:text-second hover:bg-second"
-          >
-            Continue exploring
-          </Link>
-        </div>
-      </section>
+      <Banner />
 
-      <Spacer size={150} />
+      <Spacer size={140} />
 
-      <section className="">
-        <div className="md:text-center">
-          <p className="title mb-2">ABOUT ME</p>
-          <h2 className="huge-title mb-2">Who Is Juan Pablo Briceno?</h2>
-          <h2 className="sub-title mb-[32px] md:mb-[62px]">
-            Just a human obsessed with leveraging the internet and technology to
-            live the lives we want.
-          </h2>
-        </div>
-        <div className="grid grid-cols-4 gap-4 items-center">
-          <img src="/juan.png" className="w-auto rounded-full shadow-xl" />
-          <span className="col-span-3">
-            <h2 className="header">Juan Pablo Briceno</h2>
-            <h2 className={!isDarkMode ? "copy mt-1" : "copy-light mt-1"}>
-              {isSpanish
-                ? "Desarrollador Front-End enfocado en producto"
-                : "Product-focused Front End Developer"}
-            </h2>
-            <a
-              href={"https://github.com/juanbric"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sub-copy hover:underline"
-            >
-              Github @juanbric
-            </a>
-          </span>
-        </div>
-      </section>
+      <Resources blogs={blogs} isSpanish={isSpanish} />
 
-      <Spacer size={35} />
+      <Spacer size={100} />
 
-      {/* Bio */}
-      <section>
-        <p>{isSpanish ? "Sobre mi" : "About"}</p>
-        <Spacer size={7} />
-        <h1 className={!isDarkMode ? "copy" : "copy-light"}>{bio}</h1>
-      </section>
+      <About myStuff={myStuff} isDarkMode={isDarkMode} />
 
-      <Spacer size={49} />
+      <Spacer size={100} />
 
-      {/* CV */}
+      <Portfolio isDarkMode={isDarkMode} gigs={gigs} />
 
-      {/* Side Projects */}
-      <section>
-        <p>{isSpanish ? "Proyectos paralelos" : "Side Projects"}</p>
-        <Spacer size={15} />
-        {gigs.map((project, i) => {
-          return (
-            <Projects
-              period={project.period}
-              title={project.title}
-              workLink={project.workLink}
-              description={project.description}
-              tech={project.tech}
-              img={project.img}
-              key={i}
-            />
-          );
-        })}
-      </section>
+      <Spacer size={100} />
 
-      <section>
-        <p>{isSpanish ? "Enlaces" : "Links"}</p>
-        <Spacer size={15} />
-        {myStuff.map((stuff, i) => {
-          return (
-            <Links
-              platform={stuff.platform}
-              link={stuff.link}
-              userName={stuff.userName}
-              key={i}
-            />
-          );
-        })}
-      </section>
+      <Footer isDarkMode={isDarkMode} myStuff={myStuff} />
     </>
   );
 }
