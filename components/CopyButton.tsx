@@ -1,10 +1,7 @@
-import { ToggleContext } from "@/pages/_app";
 import { useClipboard, useToast } from "@chakra-ui/react";
-import React, { useContext } from "react";
+import React from "react";
 
 const CopyButton = ({ link }: { link: any }) => {
-  const toggleFromContext = useContext(ToggleContext);
-  const { isDarkMode, isSpanish } = toggleFromContext;
   const toast = useToast();
   const { onCopy } = useClipboard(link);
   return (
@@ -13,14 +10,8 @@ const CopyButton = ({ link }: { link: any }) => {
       onClick={() => {
         toast({
           render: () => (
-            <div
-              className={
-                isDarkMode
-                  ? "border-l-4 border-l-[#3c31dd] bg-[white] shadow-xl flex text-center justify-center py-1 rounded-[6px]"
-                  : "border-l-4 border-l-[#3c31dd] bg-[#2f3742] shadow-xl flex text-center justify-center text-white py-1 rounded-[6px]"
-              }
-            >
-              {isSpanish ? "Copiado" : `Copied`}
+            <div className="border-l-4 border-l-[#3c31dd] bg-[#2f3742] shadow-xl flex text-center justify-center text-white py-1 rounded-[2px]">
+              Copied
             </div>
           ),
           duration: 3000,
@@ -28,11 +19,7 @@ const CopyButton = ({ link }: { link: any }) => {
         });
       }}
     >
-      <img
-        onClick={onCopy}
-        className="pl-4"
-        src={!isDarkMode ? "/share-black.svg" : "/share.svg"}
-      />
+      <img onClick={onCopy} className="pl-4" src="/share-black.svg" />
     </button>
   );
 };

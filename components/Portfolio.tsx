@@ -1,38 +1,39 @@
 import React from "react";
+import Header from "./Header";
 import Projects from "./Projects";
+import Spacer from "./Spacer";
 
-const Portfolio = ({ isDarkMode, gigs }: { isDarkMode: any; gigs: any }) => {
+const Portfolio = ({ gigs }: { gigs: any }) => {
   return (
     <section className="">
-      <div className="md:text-center">
-        <p className="title mb-2">PORTFOLIO</p>
-        <h2 className="huge-title mb-2">Leveraging The Web</h2>
-        <h2
-          className={
-            !isDarkMode
-              ? "copy mb-[32px] md:mb-[62px]"
-              : "copy-light mb-[32px] md:mb-[62px]"
-          }
-        >
-          Some of the clients I've helped in taking advantage of the Internet to work
-          less, earn more, and live fully.
-        </h2>
+      <Spacer size={40} />
+      <div className="lg:flex lg:justify-center lg:items-center">
+        <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
+          <Header
+            category={"PORTFOLIO"}
+            title={"Leveraging The Web"}
+            description={
+              "Some of the clients I've helped in taking advantage of the Internet to work less, earn more, and live fully."
+            }
+          />
+          <div className="md:grid md:grid-cols-3 md:gap-12 mt-0 md:mt-4">
+            {gigs.map((project: any, i: any) => {
+              return (
+                <Projects
+                  title={project.title}
+                  workLink={project.workLink}
+                  description={project.description}
+                  tech={project.tech}
+                  img={project.img}
+                  key={i}
+                  screenshot={project.screenshot}
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-8">
-        {gigs.map((project: any, i: any) => {
-          return (
-            <Projects
-              title={project.title}
-              workLink={project.workLink}
-              description={project.description}
-              tech={project.tech}
-              img={project.img}
-              key={i}
-              screenshot={project.screenshot}
-            />
-          );
-        })}
-      </div>
+      <Spacer size={40} />
     </section>
   );
 };

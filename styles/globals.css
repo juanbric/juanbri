@@ -5,8 +5,6 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  color: white;
-  background: #202731;
   overflow-x: hidden;
 }
 
@@ -15,8 +13,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #202731;
+  color: white;
   min-height: 100px;
-  padding: 100px 14px;
 }
 
 /* Fonts */
@@ -29,8 +28,7 @@ main {
 .title {
   font-family: Montserrat;
   line-height: 18px;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 24px;
 }
 
 .sub-title {
@@ -57,6 +55,12 @@ main {
   font-weight: 400;
 }
 
+.copy-big {
+  font-weight: 400;
+  color: #ffffffa3;
+  font-size: 18px;
+}
+
 .copy {
   font-weight: 400;
   color: #ffffffa3;
@@ -78,39 +82,40 @@ main {
 
 /* Markdown */
 .markdown h2 {
-  line-height: 24px;
-  font-size: 20px;
-  font-weight: 400;
+  line-height: 36px;
+  font-size: 26px;
+  font-weight: 800;
   margin-top: 20px;
   margin-bottom: 4px;
 }
 .markdown h3 {
-  line-height: 22px;
-  font-size: 18px;
-  font-weight: 400;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 800;
   margin-top: 18px;
   margin-bottom: 4px;
 }
 .markdown p {
-  line-height: 21px;
-  font-size: 14px;
+  line-height: 26px;
   font-weight: 400;
-  /* color: rgba(255, 255, 255, 0.64); */
+  font-size: 18px;
   margin-bottom: 12px;
+  color: #ffffffa3;
 }
 
 .markdown a:hover {
-  line-height: 21px;
-  font-size: 14px;
+  line-height: 26px;
   font-weight: 400;
-  color: rgba(125, 101, 244, 0.64);
+  font-size: 18px;
+  color: rgb(95, 63, 255);
   text-underline-offset: 2px;
 }
 .markdown a {
-  line-height: 21px;
-  font-size: 14px;
+  line-height: 26px;
   font-weight: 400;
+  font-size: 18px;
   text-decoration: underline;
+  color: #ffffffa3;
 }
 .markdown img {
   display: block;
@@ -120,9 +125,9 @@ main {
   border-radius: 22px;
 }
 .markdown li {
-  line-height: 22px;
-  font-size: 14px;
+  line-height: 26px;
   font-weight: 400;
+  font-size: 18px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 16px;
@@ -130,6 +135,7 @@ main {
 .markdown ul {
   margin-top: 12px;
   margin-bottom: 12px;
+  color: #ffffffa3;
 }
 .markdown li::before {
   content: '•';
@@ -137,6 +143,11 @@ main {
 }
 .markdown pre {
   margin-bottom: 12px;
+  margin-left: 12px;
+  max-width: 300px;
+}
+.markdown strong {
+  color: white;
 }
 
 /* Colors */
