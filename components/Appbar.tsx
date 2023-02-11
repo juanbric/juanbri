@@ -62,8 +62,8 @@ const Appbar = () => {
         <Link
           className={
             !isDarkMode
-              ? "bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300"
-              : "bg-blue py-1 rounded-[6px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300 text-white"
+              ? "bg-blue py-1 rounded-[2px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300"
+              : "bg-blue py-1 rounded-[2px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300 text-white"
           }
           href={"/discover"}
         >

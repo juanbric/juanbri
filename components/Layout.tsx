@@ -13,8 +13,8 @@ export default function Layout({ children }: { children: any }) {
         }
       >
         <Appbar />
-        <main className="relative flex flex-col items-center min-h-[100px] py-[100px] px-[14px]">
-          <div className="wrap">{children}</div>
+        <main className="relative flex flex-col items-center min-h-[100px] py-[60px] px-[20px]">
+          <div className="max-w-[1130px]">{children}</div>
         </main>
       </div>
     </>

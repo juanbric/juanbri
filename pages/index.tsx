@@ -1,64 +1,50 @@
+import BlogCard from "@/components/BlogCard";
 import Experience from "@/components/Experience";
 import Links, { myStuff } from "@/components/Links";
 import MetaTag from "@/components/MetaTag";
 import Projects from "@/components/Projects";
 import Schema from "@/components/Schema";
+import Skeleton from "@/components/Skeleton";
 import Spacer from "@/components/Spacer";
 import { URL } from "@/config";
+import { createClient } from "contentful";
+import Link from "next/link";
 import { useContext } from "react";
 import { ToggleContext } from "./_app";
 
-export default function Home() {
+export async function getStaticProps() {
+  // Store contentful API keys into a client variable
+  const client = createClient({
+    //@ts-ignore
+    space: process.env.CONTENTFUL_SPACE_ID,
+    //@ts-ignore
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  // Store blog content from our contentful space into a res variable
+  const res = await client.getEntries({ content_type: "blog" });
+
+  // Adding .items to res gives us the whole object of the blog content
+  return {
+    props: {
+      blogs: res.items,
+      revalidate: 1,
+    },
+  };
+}
+
+export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
   const toggleFromContext = useContext(ToggleContext);
   const { isDarkMode, isSpanish } = toggleFromContext;
-
   const bio = isSpanish
     ? "GM. Soy Juan, un desarrollador Front End apasionado por la creación de productos dinámicos y centrados en el usuario. Con experiencia en varios países e idiomas, actualmente llamo a la soleada ciudad de Las Palmas de Gran Canaria mi hogar en España. Centrado en código limpio, diseño atractivo y product-market-fit. Constantemente deploying, constantemente aprendiendo."
     : "GM. I'm Juan, a passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping, constantly learning.";
-  const title = isSpanish
-    ? "Briceno | Desarrollador Front End | Las Palmas de Gran Canaria España"
-    : "Briceno | Front End Developer | Las Palmas de Gran Canaria Spain";
-  const description = isSpanish
+  const metaTitle = "Juan Pablo Briceno";
+  const localDescription = isSpanish
     ? "Un desarrollador Front End apasionado por la creación de productos dinámicos y centrados en el usuario. Con experiencia en varios países e idiomas, actualmente llamo a la soleada ciudad de Las Palmas de Gran Canaria mi hogar en España. Centrado en código limpio, diseño atractivo y product-market-fit. Constantemente deploying, constantemente aprendiendo."
     : "A passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping, constantly learning.";
   const date = new Date();
   const image = "https://i.ibb.co/C8cvD7z/Group-2.png";
-
-  const careerPath = [
-    {
-      period: isSpanish ? "2021 - presente" : "2021 - current",
-      title: "Front End Lead & Cofounder – Soltype",
-      workLink: "https://www.soltype.io/",
-      description: isSpanish
-        ? "Dirigí un equipo de 3 ingenieros en el desarrollo de nuestras herramientas para creadores web3 y su aplicación a los libros electrónicos NFTs. Trabajé en estrecha colaboración con el CTO para alcanzar nuestros objetivos tácticos y mejorar tanto nuestras direcciones técnicas."
-        : "Led a team of 3 engineers to develop our web3 creator tools and eBook NFT app. Worked closely with the CTO to build our tactical objectives and improve both our technical directions and shipping frequency.",
-      tech: `React • NextJS • RESTFUL API • CI/CD • Jira • Git • 
-      <a href="https://www.metaplex.io/" target="_blank" rel="noopener noreferrer" className="hover:underline">Metaplex</a> 
-      • TailwindCSS`,
-    },
-    {
-      period: isSpanish ? "2021 - presente" : "2021 - current",
-      title: isSpanish
-        ? "Ingeniero Front End – Independiente"
-        : "Front End Engineer – Freelance",
-      workLink: "https://www.zentradev.vercel.app/",
-      description: isSpanish
-        ? "Colaboré con una variedad de agencias, nuevas empresas e individuos en la creación de productos digitales. Los clientes han incluido fotógrafos conocidos, escuelas locales y consultores de cocina."
-        : "Worked with a range of agencies, start-ups and individuals to build products. Clients included well known Photographers, local Schools, and Kitchen Consultants.",
-      tech: "React • NextJS • TypeScript • Contentful • TailwindCSS • Chakra UI",
-    },
-    {
-      period: "2020 - 2021",
-      title: isSpanish
-        ? "Consultor de Adquisición de Talento Tecnológico - EBC"
-        : "Tech Talent Acquisition Consultant - EBC",
-      workLink: "https://www.ethosbc.com/",
-      description: isSpanish
-        ? "Experiencia internacional de reclutamiento técnico de ciclo completo, con un profundo conocimiento de las prácticas globales de reclutamiento y la capacidad de buscar, involucrar y activar candidatos pasivos en el área tecnológica."
-        : "International full-cycle technical recruiting experience, with a deep understanding of global recruitment practices and the ability to source, engage, and activate passive candidates in the tech industry.",
-      tech: "SalesForce • SmartRecruiters • Pocket Recruiter • Bullhorn",
-    },
-  ];
 
   const gigs = [
     {
@@ -150,38 +136,125 @@ export default function Home() {
   return (
     <>
       <Schema
-        title={title}
+        title={metaTitle}
         date={date}
         image={image}
-        description={description}
+        description={localDescription}
         articleBody={undefined}
       />
       <MetaTag
-        title={title}
-        description={description}
+        title={metaTitle}
+        description={localDescription}
         url={URL}
         image={image}
       />
 
-      {/* Header */}
-      <section className="grid grid-cols-4 gap-4 items-center">
-        <img src="/juan.png" className="w-auto rounded-full shadow-xl" />
-        <span className="col-span-3">
-          <h2 className="header">Juan Pablo Briceno</h2>
-          <h2 className={!isDarkMode ? "copy mt-1" : "copy-light mt-1"}>
-            {isSpanish
-              ? "Desarrollador Front-End enfocado en producto"
-              : "Product-focused Front End Developer"}
+      <section>
+        <div className="flex md:grid md:grid-cols-2">
+          <div className="">
+            <h1 className="title mb-4 md:mb-8">JUAN PABLO BRICENO</h1>
+            <h2 className="huge-title mb-4 md:mb-8">
+              Work Less. Earn More. Live fully.
+            </h2>
+            <p className="mb-6 md:mb-8">
+              <span className="font-bold">
+                Join 80,000+ getting mindf*cked every Saturday morning
+              </span>{" "}
+              while reading The Koe Letter (you’ll learn a bit about life &
+              business too.)
+            </p>
+            <div className="flex-row">
+              <input
+                type="email"
+                className="outline-none bg-transparent p-2 border-white border-b mr-5 max-w-[300px]"
+                placeholder="Your email"
+              />
+              <button className="mt-4 md:mt-0 bg-blue py-2 rounded-[2px] px-4 hover:text-second hover:bg-second">
+                Read for free
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Spacer size={150} />
+      <section className="">
+        <div className="md:text-center">
+          <p className="title mb-2">RESOURCES</p>
+          <h2 className="huge-title mb-2">Where Do I Start?</h2>
+          <h2 className="sub-title mb-[32px] md:mb-[62px]">
+            Gain clarity on your future, train your creativity, and learn a
+            recession proof skill.
           </h2>
-          <a
-            href={"https://github.com/juanbric"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sub-copy hover:underline"
+        </div>
+        <div className="md:grid md:grid-cols-3 md:gap-8">
+          {blogs?.slice(0, 12).map((article: any, i: any) => {
+            const { title, slug, description, language } = article?.fields;
+            const img = article?.fields.img.fields.file.url;
+            return (
+              <>
+                {(isSpanish && language === "es") ||
+                (!isSpanish && language === "en") ? (
+                  <div
+                    key={i}
+                    className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300"
+                  >
+                    <Link
+                      key={article?.sys.id}
+                      href={slug}
+                      className="justify-center items-center"
+                    >
+                      <BlogCard
+                        img={img}
+                        title={title}
+                        description={description}
+                      />
+                    </Link>
+                  </div>
+                ) : null}
+              </>
+            );
+          })}
+        </div>
+        <div className="text-center mt-12">
+          <Link
+            href={"/discover"}
+            className="bg-blue py-2 rounded-[2px] px-4 hover:text-second hover:bg-second"
           >
-            Github @juanbric
-          </a>
-        </span>
+            Continue exploring
+          </Link>
+        </div>
+      </section>
+
+      <Spacer size={150} />
+
+      <section className="">
+        <div className="md:text-center">
+          <p className="title mb-2">ABOUT ME</p>
+          <h2 className="huge-title mb-2">Who Is Juan Pablo Briceno?</h2>
+          <h2 className="sub-title mb-[32px] md:mb-[62px]">
+            Just a human obsessed with leveraging the internet and technology to
+            live the lives we want.
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 items-center">
+          <img src="/juan.png" className="w-auto rounded-full shadow-xl" />
+          <span className="col-span-3">
+            <h2 className="header">Juan Pablo Briceno</h2>
+            <h2 className={!isDarkMode ? "copy mt-1" : "copy-light mt-1"}>
+              {isSpanish
+                ? "Desarrollador Front-End enfocado en producto"
+                : "Product-focused Front End Developer"}
+            </h2>
+            <a
+              href={"https://github.com/juanbric"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sub-copy hover:underline"
+            >
+              Github @juanbric
+            </a>
+          </span>
+        </div>
       </section>
 
       <Spacer size={35} />
@@ -196,23 +269,6 @@ export default function Home() {
       <Spacer size={49} />
 
       {/* CV */}
-      <section>
-        <p>{isSpanish ? "Experiencia de trabajo" : "Work Experience"}</p>
-        <Spacer size={15} />
-        {careerPath.map((experience, i) => {
-          return (
-            <Experience
-              period={experience.period}
-              title={experience.title}
-              workLink={experience.workLink}
-              description={experience.description}
-              tech={experience.tech}
-              key={i}
-            />
-          );
-        })}
-      </section>
-      <Spacer size={15} />
 
       {/* Side Projects */}
       <section>
