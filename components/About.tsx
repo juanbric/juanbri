@@ -26,13 +26,13 @@ const About = ({ myStuff }: { myStuff: any }) => {
               </div>
             </div>
             <span className="md:col-span-2">
-              <h2 className="sub-title mb-3">gm, I'm Juan.</h2>
+              <h2 className="sub-title mb-3">gm, I&apos;m Juan.</h2>
               <h3 className="sub-sub-title mb-4">
                 I’m a web developer & web designer for 6-7 figure service
                 businesses.
               </h3>
               <h2 className="copy">
-                I’m the guy they come to when they want to go from stale and
+                I&apos;m the guy they come to when they want to go from stale and
                 inefficient service businesses to highly profitable and lean
                 earning engines. No flashy sales tactics and pushy marketing in
                 this corner of the internet. <br />
@@ -42,7 +42,7 @@ const About = ({ myStuff }: { myStuff: any }) => {
                 effort. <br />
                 <br />
                 With hands-on experience and a proven track record of success
-                working with over 500 clients, I've honed my skills and
+                working with over 500 clients, I&apos;ve honed my skills and
                 developed efficient systems as a transformed developer,
                 consultant, and creator.
                 <br />
