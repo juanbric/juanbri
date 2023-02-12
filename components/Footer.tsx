@@ -37,7 +37,7 @@ const Footer = ({ copy }: { copy: string }) => {
               <h3 className="sub-sub-title my-4">
                 Work Less. Earn More. Live fully.
               </h3>
-              <h1 className="copy">{copy}</h1>
+              <h2 className="copy">{copy}</h2>
               <div className="flex flex-row">
                 {myStuff.map((stuff: any, i: any) => {
                   return <Links icon={stuff.icon} link={stuff.link} key={i} />;
