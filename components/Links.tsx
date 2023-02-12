@@ -1,65 +1,15 @@
-import { ToggleContext } from "@/pages/_app";
-import { useContext } from "react";
-
-export const myStuff = [
-  {
-    platform: "Github",
-    link: "https://github.com/juanbric",
-    userName: "@juanbric",
-  },
-  {
-    platform: "Twitter",
-    link: "https://twitter.com/juanbrisol",
-    userName: "@juanbrisol",
-  },
-  {
-    platform: "LinkedIn",
-    link: "https://www.linkedin.com/in/juanpablobriceno/",
-    userName: "Juan Pablo Briceno",
-  },
-  {
-    platform: "Email",
-    link: `mailto:juanbri@gmx.com?subject=Hey%20Juan%20%3A)`,
-    userName: "juanbri [at] gmx [dot] com",
-  },
-];
-
-const Links = ({
-  platform,
-  link,
-  userName,
-}: {
-  platform: any;
-  link: any;
-  userName: any;
-}) => {
-  const toggleFromContext = useContext(ToggleContext);
-  const { isDarkMode } = toggleFromContext;
+const Links = ({ icon, link }: { icon: any; link: any }) => {
   return (
-    <div className="lg:grid lg:grid-cols-4 pb-4">
-      <p className={!isDarkMode ? "copy mt-1.5" : "copy-light mt-1.5"}>{platform}</p>
-      <h2 className="col-span-3 flex items-center">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-2.5 hover:underline"
-        >
-          {userName}
-        </a>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-1.5"
-        >
-          <img
-            src={!isDarkMode ? "/arrow.svg" : "/arrow-black.svg"}
-            className={!isDarkMode ? "w-[14px] h-[14px] transform rotate-[20deg]" : "w-[10px] h-[10px] ml-0.5 transform rotate-[20deg]"}
-          />
-        </a>
-      </h2>
-    </div>
+    <>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 gap-4"
+      >
+        <img src={icon} className="w-[36px] mx-2" />
+      </a>
+    </>
   );
 };
 

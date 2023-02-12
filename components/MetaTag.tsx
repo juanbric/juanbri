@@ -36,7 +36,7 @@ export const MetaTag = ({
       <meta name="robots" content="index, follow" />
 
       {/* Twitter */}
-      <meta name="twitter:site" content="@juanbrisol" />
+      <meta name="twitter:site" content="@juanbridev" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:card" content="summary_large_image" />

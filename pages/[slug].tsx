@@ -10,10 +10,9 @@ import ProgressBar from "@/components/ProgressBar";
 import { URL } from "@/config";
 import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
-import { useContext } from "react";
-import { ToggleContext } from "./_app";
 import { Tooltip, useClipboard, useToast } from "@chakra-ui/react";
 import CopyButton from "@/components/CopyButton";
+import Footer from "@/components/Footer";
 
 // Store contentful API keys into a client variable
 const client = createClient({
@@ -69,7 +68,6 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
-  const toggleFromContext = useContext(ToggleContext);
   if (!blog) return <Skeleton />;
   const { title, article, slug, img, description, metaDescription, category } =
     blog.fields;
@@ -79,7 +77,6 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   //@ts-ignore
   const localDate = new Date(date).toLocaleDateString("es-ES", options);
-  const { isDarkMode, isSpanish } = toggleFromContext;
   return (
     <>
       <Schema
@@ -95,72 +92,82 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
         url={URL + slug}
         image={"https:" + imgUrl}
       />
-      <article className="mb-14">
-        <h1 className="header">{title}</h1>
-        <h3 className={!isDarkMode ? "copy my-8" : "copy-light my-8"}>
-          {description}
-        </h3>
-        <section className="flex flex-wrap">
-          <div>
-            <img src="/logo.svg" className="w-6 h-6 mb-4" />
-          </div>
-          <Link
-            className={
-              !isDarkMode
-                ? "hover:underline copy pl-2 md:pl-2 pr-6"
-                : "hover:underline copy-light pl-2 md:pl-2 pr-6"
-            }
-            href={"/"}
-          >
-            Juan Pablo Briceno
-          </Link>
-          <span className="sub-copy">Last update on {localDate}</span>
-          <span>
-            <Tooltip>
-              <CopyButton link={link} />
-            </Tooltip>
-          </span>
-        </section>
-        <Spacer size={18} />
-        <Image
-          src={"https:" + imgUrl}
-          alt="Cover image"
-          className="object-cover h-[300px] w-full rounded-[6px]"
-          width={800}
-          height={300}
-        />
-        <Spacer size={24} />
-        <ReactMarkdown className="markdown">{article}</ReactMarkdown>
-        <ProgressBar />
-      </article>
-
-      <p className="font-bold">It could also be of your interest</p>
-      <Spacer size={37} />
-
-      <div className="md:grid md:grid-cols-2 md:gap-8">
-        {blogs
-          .filter((entry: any) =>
-            !isSpanish
-              ? entry.fields.language === "en"
-              : entry.fields.language === "es"
-          )
-          .slice(0, 7)
-          .map((entry: any) => {
-            const { title, slug, description } = entry.fields;
-            const img = entry?.fields.img.fields.file.url;
-            return title === blog.fields.title ? null : (
-              <div className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
-                <Link
-                  key={entry?.sys.id}
-                  href={slug}
-                  className="justify-center items-center"
-                >
-                  <BlogCard img={img} title={title} description={description} />
-                </Link>
+      <div className="lg:flex lg:justify-center lg:items-center">
+        <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
+          <article className="mb-14">
+            <h1 className="huge-title mt-8">{title}</h1>
+            <h3 className="copy-big my-8">{description}</h3>
+            <section className="flex flex-wrap">
+              <div>
+                <img src="/logo.svg" className="w-6 h-6 mb-4" />
               </div>
-            );
-          })}
+              <Link
+                className="hover:underline copy pl-2 md:pl-2 pr-6"
+                href={"/"}
+              >
+                Juan Pablo Briceno
+              </Link>
+              <span className="sub-copy mt-0.5">
+                Last update on {localDate}
+              </span>
+              <span className="mt-0.5">
+                <Tooltip>
+                  <CopyButton link={link} />
+                </Tooltip>
+              </span>
+            </section>
+            <Spacer size={18} />
+            <Image
+              src={"https:" + imgUrl}
+              alt="Cover image"
+              className="object-cover h-[300px] w-full rounded-[2px]"
+              width={800}
+              height={300}
+            />
+            <Spacer size={24} />
+            <ReactMarkdown className="markdown">{article}</ReactMarkdown>
+            <ProgressBar />
+          </article>
+
+          <p className="sub-title">It could also be of your interest</p>
+          <Spacer size={37} />
+
+          <div className="md:grid md:grid-cols-3 md:gap-12">
+            {blogs
+              .filter((entry: any) =>
+                true
+                  ? entry.fields.language === "en"
+                  : entry.fields.language === "es"
+              )
+              .slice(0, 6)
+              .map((entry: any) => {
+                const { title, slug, description } = entry.fields;
+                const img = entry?.fields.img.fields.file.url;
+                return title === blog.fields.title ? null : (
+                  <div
+                    key={entry?.sys.id}
+                    className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300"
+                  >
+                    <Link href={slug} className="justify-center items-center">
+                      <BlogCard
+                        img={img}
+                        title={title}
+                        description={description}
+                        date={undefined}
+                      />
+                    </Link>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </div>
+      <Spacer size={50} />
+      <Footer
+        copy={
+          "I delve into the depths of human potential, the art of crafting a personalized lifestyle, and the fulfillment of achieving business success, to provide you with an innovative and easily understandable approach to improving your life."
+        }
+      />
     </>
   );
 };
