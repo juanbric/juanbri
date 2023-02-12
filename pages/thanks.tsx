@@ -19,14 +19,14 @@ const thanks = () => {
         </h2>
         <Spacer size={24} />
         <h2 className="sub-title text-center">
-          You've Successfully Joined The Juanbri Letter.
+          You&apos;ve Successfully Joined The Juanbri Letter.
         </h2>
         <Spacer size={24} />
         <p className="text-center">
           Check your email for a warm welcome, what to expect, and a few tips.
         </p>
         <p className="italic text-center">
-          (The email is titled "Form Submit")
+          (The email is titled &apos;Form Submit&apos;)
         </p>
         <Spacer size={54} />
         <h2 className="copy-big text-center">
