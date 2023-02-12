@@ -14,7 +14,7 @@ main {
   flex-direction: column;
   font-family: Poppins, sans-serif;
   align-items: center;
-  background: #0d0f13;
+  background: #11151a;
   color: white;
   min-height: 100px;
 }
@@ -99,7 +99,7 @@ main {
 
 /* Markdown */
 .markdown h2 {
-  line-height: 36px;
+  line-height: 46px;
   font-size: 26px;
   font-weight: 800;
   margin-top: 20px;
@@ -117,7 +117,7 @@ main {
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 12px;
-  color: #ffffffa3;
+  color: #ffffffed;
 }
 
 .markdown a:hover {
@@ -132,7 +132,7 @@ main {
   font-weight: 400;
   font-size: 18px;
   text-decoration: underline;
-  color: #ffffffa3;
+  color: #ffffffed;
 }
 .markdown img {
   display: block;
@@ -152,7 +152,7 @@ main {
 .markdown ul {
   margin-top: 12px;
   margin-bottom: 12px;
-  color: #ffffffa3;
+  color: #ffffffed;
 }
 .markdown li::before {
   content: '•';

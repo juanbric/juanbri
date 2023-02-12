@@ -33,7 +33,7 @@ export async function getStaticProps() {
 export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
   const bio =
     "GM. I'm Juan, a passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping, constantly learning.";
-  const metaTitle = "Juan Pablo Briceno | Work Less, Earn More, Live Fully.";
+  const metaTitle = "Juan Pablo Briceno | Web Development & Web Design";
   const localDescription =
     "A passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping, constantly learning.";
   const date = new Date();
@@ -110,7 +110,7 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       <Portfolio gigs={gigs} />
       <Footer
         copy={
-          "I dive deep into human potential, lifestyle design, and one-person businesses to give you a unique, digestible way of improving your life."
+          "I delve into the depths of human potential, the art of crafting a personalized lifestyle, and the fulfillment of achieving business success, to provide you with an innovative and easily understandable approach to improving your life."
         }
       />
     </>

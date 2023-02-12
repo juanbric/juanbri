@@ -70,7 +70,7 @@ const Discover = ({ blogs }: { blogs: any }) => {
             category={"THE JUANBRI LETTER"}
             title={"Explore Your Curiosity"}
             description={
-              "Exploring the depths of human potential, lifestyle design, and online opportunites."
+              "Exploring the depths of human potential, lifestyle design, and business success."
             }
           />
           <div className="md:grid md:grid-cols-3 md:gap-8">

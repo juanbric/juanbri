@@ -165,7 +165,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
       <Spacer size={50} />
       <Footer
         copy={
-          "I dive deep into human potential, lifestyle design, and one-person businesses to give you a unique, digestible way of improving your life."
+          "I delve into the depths of human potential, the art of crafting a personalized lifestyle, and the fulfillment of achieving business success, to provide you with an innovative and easily understandable approach to improving your life."
         }
       />
     </>
