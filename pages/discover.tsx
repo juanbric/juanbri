@@ -33,7 +33,7 @@ export async function getStaticProps() {
 const Discover = ({ blogs }: { blogs: any }) => {
   const description =
     "Join me on a journey into the exciting world of web development... where I'll reveal insider tips and tricks to take your skills to the next LEVEL and become ...";
-  const title = "The juanbri Letter | Juan Pablo Briceno";
+  const title = "The Juanbri Letter | Juan Pablo Briceno";
   const date = new Date();
   const image = "https://svgshare.com/i/pdv.svg";
   return (
