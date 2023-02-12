@@ -11,7 +11,7 @@ const Resources = ({ blogs }: { blogs: any }) => {
         category={"RESOURCES"}
         title={"Where Do I Start?"}
         description={
-          "Gain clarity on your future, train your creativity, and learn a recession proof skill."
+          "Gain clarity on your purpose, nurture your creative side, and build a $1 Million dollar skill stack."
         }
       />
       <div className="lg:flex lg:justify-center lg:items-center">

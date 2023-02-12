@@ -12,8 +12,9 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
+  font-family: Poppins, sans-serif;
   align-items: center;
-  background: #202731;
+  background: #0d0f13;
   color: white;
   min-height: 100px;
 }
@@ -55,9 +56,25 @@ main {
   font-weight: 400;
 }
 
+.copy-huge {
+  font-weight: 400;
+  line-height: 29px;
+  font-size: 24px;
+}
+
 .copy-big {
   font-weight: 400;
   color: #ffffffa3;
+  font-size: 18px;
+}
+
+.copy-big-white {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.copy-big-bold-white {
+  font-weight: 600;
   font-size: 18px;
 }
 

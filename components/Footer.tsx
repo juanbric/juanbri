@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Links from "./Links";
 import Spacer from "./Spacer";
@@ -30,7 +31,9 @@ const Footer = ({ copy }: { copy: string }) => {
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
           <div className="flex-col-reverse flex md:grid md:grid-cols-2">
             <div className="max-w-[350px]">
-              <img src="/logo.svg" className="w-[52px] h-[52px]" />
+              <Link href={"/"}>
+                <img src="/logo.svg" className="w-[52px] h-[52px]" />
+              </Link>
               <h3 className="sub-sub-title my-4">
                 Work Less. Earn More. Live fully.
               </h3>
@@ -43,17 +46,10 @@ const Footer = ({ copy }: { copy: string }) => {
             </div>
             <div className="">
               <h2 className="sub-title mb-3">
-                Gain A New Perspective On Life & Business
+                Gain A New Perspective On Life and Business
               </h2>
-              <p className="mb-6 md:mb-8 mt-4">
-                <span className="font-bold">
-                  Join 80,000+ getting mindf*cked every Saturday morning
-                </span>{" "}
-                while reading The Koe Letter (you’ll learn a bit about life &
-                business too.)
-              </p>
               <div className="mb-12 md:mb-0">
-              <Subscribe />
+                <Subscribe />
               </div>
             </div>
           </div>

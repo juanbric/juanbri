@@ -13,7 +13,7 @@ const Portfolio = ({ gigs }: { gigs: any }) => {
             category={"PORTFOLIO"}
             title={"Leveraging The Web"}
             description={
-              "Some of the clients I've helped in taking advantage of the Internet to work less, earn more, and live fully."
+              "Some of the clients I've helped taking advantage of the Internet to work less, earn more, and live fully."
             }
           />
           <div className="md:grid md:grid-cols-3 md:gap-12 mt-0 md:mt-4">

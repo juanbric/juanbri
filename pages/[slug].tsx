@@ -139,7 +139,7 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
                   ? entry.fields.language === "en"
                   : entry.fields.language === "es"
               )
-              .slice(0, 10)
+              .slice(0, 6)
               .map((entry: any) => {
                 const { title, slug, description } = entry.fields;
                 const img = entry?.fields.img.fields.file.url;

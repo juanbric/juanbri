@@ -1,3 +1,5 @@
+import Spacer from "./Spacer";
+
 const Projects = ({
   title,
   img,
@@ -30,13 +32,20 @@ const Projects = ({
       <div className="flex-row flex mt-5 mb-4 items-center">
         <img src={img} className="w-8 h-8 pb-1" />
         <h2 className="text-start sub-title mx-3">{title}</h2>
+      </div>
+      <h3 className="copy shorten-p text-start">{description}</h3>
+      <Spacer size={18} />
+      <div className="flex-row flex items-center">
+        <p className="sub-sub-title">Visit site</p>
         <img
           src="/arrow.svg"
-          className="w-[14px] mt-2 h-[14px] transform rotate-[20deg]"
+          className="w-[14px] ml-2 h-[14px] transform rotate-[20deg]"
         />
+        
       </div>
-
-      <h3 className="copy shorten-p text-start">{description}</h3>
+      <Spacer size={12} />
+      <hr className="h-px bg-gray-200 border-0 dark:bg-white" />
+      <Spacer size={12} />
       <h3 className="sub-copy my-2">{tech}</h3>
     </a>
   );

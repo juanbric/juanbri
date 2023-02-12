@@ -13,7 +13,7 @@ const Appbar = () => {
         className="bg-blue py-1 rounded-[2px] px-3 hover:scale-110 transform-gpu ease-in-out duration-300 hover:text-second hover:bg-second"
         href={"/discover"}
       >
-        Discover
+        Explore
       </Link>
     </div>
   );

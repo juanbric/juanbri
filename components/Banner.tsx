@@ -13,13 +13,6 @@ const Banner = () => {
               <h2 className="huge-title mb-4 md:mb-8">
                 Work Less. Earn More. Live fully.
               </h2>
-              <p className="mb-6 md:mb-8">
-                <span className="font-bold">
-                  Join 80,000+ getting mindf*cked every Saturday morning
-                </span>{" "}
-                while reading The Koe Letter (you’ll learn a bit about life &
-                business too.)
-              </p>
               <Subscribe />
             </div>
           </div>

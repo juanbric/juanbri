@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import MetaTag from "@/components/MetaTag";
 import Schema from "@/components/Schema";
 import Spacer from "@/components/Spacer";
+import Subscribe from "@/components/Subscribe";
 import { URL } from "@/config";
 import { createClient } from "contentful";
 import Link from "next/link";
@@ -32,7 +33,7 @@ export async function getStaticProps() {
 const Discover = ({ blogs }: { blogs: any }) => {
   const description =
     "Join me on a journey into the exciting world of web development... where I'll reveal insider tips and tricks to take your skills to the next LEVEL and become ...";
-  const title = "Blog | Juan Pablo Briceno";
+  const title = "The juanbri Letter | Juan Pablo Briceno";
   const date = new Date();
   const image = "https://svgshare.com/i/pdv.svg";
   return (
@@ -60,23 +61,7 @@ const Discover = ({ blogs }: { blogs: any }) => {
                 Get The Latest Issue Of The Juanbri Letter Sent Straight To Your
                 Inbox
               </h2>
-              <p className="mb-6 md:mb-8">
-                <span className="font-bold">
-                  Join 80,000+ getting mindf*cked every Saturday morning
-                </span>{" "}
-                while reading The Koe Letter (you’ll learn a bit about life &
-                business too.)
-              </p>
-              <div className="flex-row">
-                <input
-                  type="email"
-                  className="outline-none bg-transparent p-2 border-white border-b mr-5 max-w-[300px]"
-                  placeholder="Your email"
-                />
-                <button className="mt-4 md:mt-0 bg-blue py-2 rounded-[2px] px-8 hover:text-second hover:bg-second hover:scale-110 transform-gpu ease-in-out duration-300">
-                  Read For Free
-                </button>
-              </div>
+              <Subscribe />
             </div>
           </div>
           <Spacer size={60} />
@@ -85,7 +70,7 @@ const Discover = ({ blogs }: { blogs: any }) => {
             category={"THE JUANBRI LETTER"}
             title={"Explore Your Curiosity"}
             description={
-              "Deep dives on human potential, lifestyle design, & one-person businesses."
+              "Exploring the depths of human potential, lifestyle design, and online opportunites."
             }
           />
           <div className="md:grid md:grid-cols-3 md:gap-8">
