@@ -16,7 +16,7 @@ const Portfolio = ({ gigs }: { gigs: any }) => {
               "Some of the clients I've helped taking advantage of the Internet to work less, earn more, and live fully."
             }
           />
-          <div className="md:grid md:grid-cols-3 md:gap-12 mt-0 md:mt-4">
+          <div className="md:grid md:grid-cols-3 md:gap-12 mt-0">
             {gigs.map((project: any, i: any) => {
               return (
                 <Projects

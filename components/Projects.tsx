@@ -24,7 +24,7 @@ const Projects = ({
     >
       <img
         src={screenshot}
-        className="rounded-[2px] object-cover h-[200px] w-full opacity-70 pt-6 md:pt-0"
+        className="rounded-[2px] object-cover h-[200px] w-full opacity-70"
         width={800}
         height={300}
       />
@@ -46,7 +46,7 @@ const Projects = ({
       <Spacer size={12} />
       <hr className="h-px bg-gray-200 border-0 dark:bg-white" />
       <Spacer size={12} />
-      <h3 className="sub-copy my-2">{tech}</h3>
+      <h3 className="sub-copy mt-2 mb-10 md:mb-0">{tech}</h3>
     </a>
   );
 };

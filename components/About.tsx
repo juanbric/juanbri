@@ -6,7 +6,7 @@ import Spacer from "./Spacer";
 const About = ({ myStuff }: { myStuff: any }) => {
   return (
     <section>
-      <Spacer size={40} />
+      <Spacer size={0} />
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
           <Header
@@ -64,7 +64,7 @@ const About = ({ myStuff }: { myStuff: any }) => {
               <h1 className="copy">
                 I will help you design, build, and improve the visibility of
                 your website or app. Smartly applied technology is the key to
-                overcoming business challenges while catapulting your venture
+                overcoming business challenges and propelling
                 forward.
               </h1>
             </span>
