@@ -9,7 +9,7 @@ const Resources = ({ blogs }: { blogs: any }) => {
     <section className="">
       <Header
         category={"RESOURCES"}
-        title={"Where Do I Start?"}
+        title={"The Juanbri Letter"}
         description={
           "Gain clarity on your purpose, nurture your creative side, and build a $1 Million dollar skill stack."
         }
