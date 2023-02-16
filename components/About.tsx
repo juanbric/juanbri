@@ -12,9 +12,7 @@ const About = ({ myStuff }: { myStuff: any }) => {
           <Header
             category={"ABOUT ME"}
             title={"Who Is Juan Pablo Briceno?"}
-            description={
-              "Just a human obsessed with leveraging the internet to live the lives we dream."
-            }
+            description={"I help you use the internet to live a better life."}
           />
           <div className="md:grid md:grid-cols-3 items-center">
             <div className="flex flex-col items-center">
@@ -27,46 +25,38 @@ const About = ({ myStuff }: { myStuff: any }) => {
             </div>
             <span className="md:col-span-2">
               <h2 className="sub-title mb-3">gm, I&apos;m Juan.</h2>
-              <h3 className="sub-sub-title mb-4">
-                I’m a web developer & web designer for 6-7 figure service
-                businesses.
-              </h3>
+              <h1 className="sub-sub-title mb-4">
+                I’m a Web Developer & Web Designer for 6-7 figure businesses.
+              </h1>
               <h2 className="copy">
-                I&apos;m the guy they come to when they want to go from stale and
-                inefficient service businesses to highly profitable and lean
-                earning engines. No flashy sales tactics and pushy marketing in
-                this corner of the internet. <br />
-                <br />I help them optimize their workflow, content, and online
-                visibility so they can work for 4 hours a day, increase their
-                revenues, and sell their products and services with no manual
-                effort. <br />
+                I&apos;m the guy they come to when they want to turn
+                unproductive businesses into profitable engines. No flashy sales
+                tactics or pushy marketing in this household. <br />
+                <br />
+                With code I will optimize your workflow, content, and online
+                visibility so you can work less and earn more.
+                <br />
                 <br />
                 With hands-on experience and a proven track record of success
-                working with over 500 clients, I&apos;ve honed my skills and
-                developed efficient systems as a transformed developer,
-                consultant, and creator.
+                across multiple industries, I&apos;ve gained a deep
+                understanding of what brings profitable results and what
+                doesn&apos;t in various business contexts.
                 <br />
                 <br />
               </h2>
               <h3 className="sub-sub-title mb-4">
-                I am currently accepting clients for a limited time - feel free
-                to{" "}
+                I am currently accepting new clients for a limited time — if you
+                are serious about transforming your business{" "}
                 <a
                   href="mailto:juanbri@gmx.com?subject=Hey%20Juan%20%3A)"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mr-2 ml-0.5 text-[#675cff]"
+                  className="mr-2 ml-0.5 text-[#8d85ff]"
                 >
-                  reach out
+                  reach out today
                 </a>
-                :)
+                and let&apos;s get started :)
               </h3>
-              <h1 className="copy">
-                I will help you design, build, and improve the visibility of
-                your website or app. Smartly applied technology is the key to
-                overcoming business challenges and propelling
-                forward.
-              </h1>
             </span>
           </div>
         </div>

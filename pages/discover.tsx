@@ -70,7 +70,7 @@ const Discover = ({ blogs }: { blogs: any }) => {
             category={"THE JUANBRI LETTER"}
             title={"Explore Your Curiosity"}
             description={
-              "Exploring the depths of human potential, lifestyle design, and business success."
+              "Exploring the depths of human potential, business strategies, and web possibilities."
             }
           />
           <div className="md:grid md:grid-cols-3 md:gap-8">
@@ -108,7 +108,11 @@ const Discover = ({ blogs }: { blogs: any }) => {
         </div>
       </div>
       <Spacer size={40} />
-      <Footer copy={"I dive deep into human potential, lifestyle design, and one-person businesses to give you a unique, digestible way of improving your life."} />
+      <Footer
+        copy={
+          "I dive deep into human potential, lifestyle design, and one-person businesses to give you a unique, digestible way of improving your life."
+        }
+      />
     </>
   );
 };
