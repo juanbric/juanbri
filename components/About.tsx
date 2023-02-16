@@ -38,9 +38,9 @@ const About = ({ myStuff }: { myStuff: any }) => {
                 <br />
                 <br />
                 With hands-on experience and a proven track record of success
-                across multiple industries, I've gained a deep understanding of
-                what brings profitable results and what doesn't in various
-                business contexts.
+                across multiple industries, I&apos;ve gained a deep
+                understanding of what brings profitable results and what
+                doesn&apos;t in various business contexts.
                 <br />
                 <br />
               </h2>
@@ -55,7 +55,7 @@ const About = ({ myStuff }: { myStuff: any }) => {
                 >
                   reach out today
                 </a>
-                and let's get started :)
+                and let&apos;s get started :)
               </h3>
             </span>
           </div>
