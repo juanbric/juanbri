@@ -111,7 +111,7 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       <Resources blogs={blogs} />
       <Footer
         copy={
-          "I delve into the depths of human potential, the art of crafting a personalized lifestyle, and the fulfillment of achieving business success, to provide you with an innovative and easily understandable approach to improving your life."
+          "I delve into human potential, business strategies, and online possibilities, to offer you a simple and efficient approach to improving your life."
         }
       />
     </>

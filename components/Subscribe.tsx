@@ -6,10 +6,10 @@ const Subscribe = () => {
     <>
       <p className="copy-big-white mb-6 md:mb-8">
         <span className="copy-big-bold-white">
-          Learn how to leverage the internet to work less and earn more.
+          Learn how to use the internet to work less and earn more.
         </span>{" "}
-        Get your free newsletter filled with actionable tips to launch, grow,
-        and monetize your internet business.
+        Sign up for a free newsletter and get tips to launch, grow,
+        and monetize your business online.
       </p>
       <form
         action="https://formsubmit.co/2e5f357c6e7e7fd9f688e34b0ae1f05f"

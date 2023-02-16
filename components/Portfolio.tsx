@@ -11,9 +11,9 @@ const Portfolio = ({ gigs }: { gigs: any }) => {
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
           <Header
             category={"PORTFOLIO"}
-            title={"Leveraging The Web"}
+            title={"Making The Most Of The Web"}
             description={
-              "Some of the clients I've helped taking advantage of the Internet to work less, earn more, and live fully."
+              "Some of the clients I've helped taking advantage of the Internet."
             }
           />
           <div className="md:grid md:grid-cols-3 md:gap-12 mt-0">
