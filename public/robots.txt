@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://juanbri.dev
+Host: https://www.juanbri.dev
 
 # Sitemaps
-Sitemap: https://juanbri.dev/sitemap.xml
+Sitemap: https://www.juanbri.dev/sitemap.xml
