@@ -7,7 +7,7 @@ import Subscribe from "./Subscribe";
 const myStuff = [
   {
     icon: "/twitter.svg",
-    link: "https://twitter.com/juanbridev",
+    link: "https://twitter.com/juanbri_sol",
   },
   {
     icon: "/linkedin.svg",

@@ -43,7 +43,7 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
   const myStuff = [
     {
       icon: "/twitter.svg",
-      link: "https://twitter.com/juanbridev",
+      link: "https://twitter.com/juanbri_sol",
     },
     {
       icon: "/linkedin.svg",
