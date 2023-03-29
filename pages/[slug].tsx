@@ -69,9 +69,9 @@ export async function getStaticProps({ params }: { params: any }) {
 
 export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
   if (!blog) return <Skeleton />;
-  const { title, article, slug, img, description, metaDescription, category } =
+  const { title, article, slug, img, description, metaDescription } =
     blog.fields;
-  const link = "https://juanbri.dev/" + slug;
+  const link = "https://www.juanbri.dev/" + slug;
   const imgUrl = img.fields.file.url;
   const date = blog.sys.updatedAt;
   const options = { year: "numeric", month: "short", day: "numeric" };

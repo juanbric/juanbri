@@ -3,7 +3,7 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   vercel: {
-    domain: 'juanbri.dev',
+    domain: 'https://www.juanbri.dev/',
   },
   images: {
       domains: ['images.ctfassets.net'],
