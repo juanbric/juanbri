@@ -61,10 +61,10 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
 
   const gigs = [
     {
-      img: "zentra.svg",
+      img: "trovali.svg",
       screenshot: "/zentra-app.png",
       title: "Zentra Dev",
-      workLink: "https://zentradev.vercel.app/",
+      workLink: "https://www.zentradev.com/",
       description:
         "A web development agency website that specializes in creating user-centric websites and apps for clients, with a focus on utilizing effective SEO techniques to improve their online presence. Services include website and application design and development, search engine optimization, and IT Consulting.",
       tech: "React • Next.js • TypeScript • Contentful • Vercel • Email-js • TailwindCSS • Chakra UI",
@@ -79,7 +79,7 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       tech: "React • TypeScript • TailwindCSS • Chakra UI",
     },
     {
-      img: "/trovali.svg",
+      img: "/logo.svg",
       screenshot: "/trovali-app.png",
       title: "Trovali",
       workLink: "https://face-recognition-juanbri.vercel.app/login",
