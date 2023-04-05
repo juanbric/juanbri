@@ -45,7 +45,7 @@ export const MetaTag = ({
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:url" content={url} />
-      <meta name="og:description" content={description} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={image} />
     </Head>

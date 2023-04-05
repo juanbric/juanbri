@@ -31,12 +31,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
-  const bio =
-    "GM. I'm Juan, a passionate Front End developer with a love for building dynamic and user-centric products. Experienced in various countries and languages, I currently call the sunny Las Palmas de Gran Canaria home in Spain. Focused on clean code, beautiful design and product market fit. Constantly shipping, constantly learning.";
-  const metaTitle =
-    "Juan Pablo Briceno | Achieve clarity in your life and business";
+  const metaTitle = "Juan Briceno | Achieve clarity in your life and business";
   const localDescription =
-    "I will help you design, build, and improve the visibility of your website or app. Smartly applied technology is the key to overcoming business challenges while catapulting your venture forward.";
+    "I empower aspiring digital entrepreneurs with  with essential skills to bootstrap their business, align their values, and stay ahead in the tech-driven business landscape. Through tailored courses and resources, I guide you on your unique path to a fulfilling solo-entrepreneurial journey.";
   const date = new Date();
   const image = "https://i.ibb.co/C8cvD7z/Group-2.png";
 
