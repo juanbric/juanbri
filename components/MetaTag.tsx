@@ -24,7 +24,7 @@ export const MetaTag = ({
       <meta name="distribution" content="Global" />
       <meta name="revisit-after" content="21 days" />
       <meta name="creator" content="Juan Pablo Briceno" />
-      <link rel="icon" href="https://svgshare.com/i/pdv.svg" />
+      <link rel="icon" href="/favicon.png" />
       <link rel = "canonical" href ={url}/>
       <meta name="publisher" content="Juan Pablo Briceno (juanbri.dev)" />
       <meta name="author" content="Juan Pablo Briceno (juanbri.dev)" />

@@ -10,7 +10,7 @@ const Banner = () => {
           <div className="flex md:grid md:grid-cols-2">
             <div className="">
               <h2 className="title mb-4 md:mb-8">JUAN BRICENO</h2>
-              <h2 className="huge-title mb-4 md:mb-8">Learn Code. Sell Big. Live Fully.</h2>
+              <h2 className="huge-title mb-4 md:mb-8">Aprende.<br/>Emprende.<br/>Triunfa.</h2>
               <Subscribe />
             </div>
           </div>
