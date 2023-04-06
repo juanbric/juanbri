@@ -53,7 +53,7 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
         image={image}
       />
       <Banner />
-      <Resources />
+      {/* <Resources /> */}
       <Blog blogs={blogs} />
       <About />
       <Footer

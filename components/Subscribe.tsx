@@ -12,7 +12,7 @@ const Subscribe = () => {
         iniciar tu negocio en línea sin complicaciones.
       </p>
       <iframe
-        src="https://embeds.beehiiv.com/19058b6b-1d46-4908-90fe-af60a1c444bc?slim=true"
+        src="https://embeds.beehiiv.com/f32055ae-3f2e-4d82-a669-dab1c06acdb4?slim=true"
         data-test-id="beehiiv-embed"
         height="52"
         frameBorder="0"
