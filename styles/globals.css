@@ -14,8 +14,8 @@ main {
   flex-direction: column;
   font-family: Poppins, sans-serif;
   align-items: center;
-  background: #11151a;
-  color: white;
+  /* background: #11151a;
+  color: #f3f2ee; */
   min-height: 100px;
 }
 
