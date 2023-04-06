@@ -58,7 +58,7 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       <About />
       <Footer
         copy={
-          "I delve into human potential, business strategies, and online possibilities, to offer you a simple and efficient approach to improving your life."
+          "Me adentro en el potencial humano, estrategias empresariales y posibilidades en línea, para ofrecerte un enfoque simple de cómo comenzar tu proyecto."
         }
       />
     </>

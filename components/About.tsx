@@ -23,7 +23,7 @@ const About = () => {
     },
   ];
   return (
-    <section>
+    <section id={"sobre"}>
       <Spacer size={0} />
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
@@ -34,9 +34,12 @@ const About = () => {
               "Te ayudo a aprovechar el poder del internet para empezar tu camino empresarial."
             }
           />
-          <div className="md:grid md:grid-cols-3 items-center">
+          <div className="flex flex-col md:flex-row items-center md:gap-14">
             <div className="flex flex-col items-center">
-              <img src="/juan.png" className="w-auto scale-120 rounded-full shadow-xl" />
+              <img
+                src="/juan.png"
+                className=" max-w-[300px] border-1 rounded-full shadow-xl"
+              />
               <div className="flex flex-row md:pb-0 pb-8 ">
                 {myStuff.map((stuff: any, i: any) => {
                   return <Links icon={stuff.icon} link={stuff.link} key={i} />;
@@ -46,20 +49,27 @@ const About = () => {
             <span className="md:col-span-2">
               <h2 className="sub-title mb-3">Hola, soy Juan.</h2>
               <h1 className="sub-sub-title mb-4">
-              Soy un asesor empresarial para emprendedores que buscan maximizar su éxito en línea.
+                Soy un asesor de emprendedores en busca de una idea de negocio
+                online clara y definida.
               </h1>
               <h2 className="copy">
-              Soy el tipo al que acuden cuando quieren pasar de ser un simple emprendedor a un creador auténtico y altamente remunerado. Nada de embudos de ventas sofisticados ni estrategias de marketing agresivas en mi enfoque. <br />
+                Soy el tipo al que acuden cuando quieren convertir ideas
+                desorganizadas en un negocio concreto y rentable. Mi objetivo es
+                que comiences tu camino empresarial sin sentirte abrumado por la
+                falta de claridad en tus ideas o las últimas tecnologías.
                 <br />
-                Mi objetivo es ayudarles a sistematizar su flujo de trabajo, marketing y contenido para que puedan trabajar solo dos horas al día, aumentar sus precios y vender sus productos y servicios sin esfuerzos manuales.
                 <br />
-                <br />
-                Como consultor y exfreelancer, he desarrollado sistemas efectivos a lo largo del tiempo, con experiencia adquirida de haber trabajado con más de 4000 estudiantes y clientes.
+                Como consultor y exfreelancer, graduado de maestría en
+                comportamiento humano en la Universidad de Leiden, he
+                desarrollado sistemas efectivos a lo largo del tiempo, con
+                experiencia adquirida de haber trabajado con más de 4000
+                estudiantes y clientes.
                 <br />
                 <br />
               </h2>
               <h3 className="sub-sub-title mb-4">
-              Actualmente, estoy aceptando nuevos clientes pero solo por tiempo limitado. Si estás comprometido a llevar tus ideas de negocio al siguiente nivel con una estructuración concreta,{" "}
+                Actualmente estoy aceptando clientes por tiempo limitado. Si
+                quieres aprender las habilidades del emprendedor del futuro,{" "}
                 <a
                   href="mailto:juanbri@gmx.com?subject=Hey%20Juan%20%3A)"
                   target="_blank"
@@ -68,7 +78,7 @@ const About = () => {
                 >
                   contáctame hoy mismo
                 </a>
-                para que empecemos. :)
+                para que empecemos.
               </h3>
             </span>
           </div>

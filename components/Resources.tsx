@@ -4,7 +4,7 @@ import Spacer from "./Spacer";
 
 const Resources = () => {
   return (
-    <section className="">
+    <section id={"recursos"} className="">
       <Header
         category={"RECURSOS"}
         title={"¿Por Dónde Empiezo?"}
@@ -16,7 +16,7 @@ const Resources = () => {
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
           <Spacer size={10} />
           <div className="md:grid md:grid-cols-2 md:gap-12">
-            <div className="">
+            <div className="mb-8 md:mb-0">
               <img src="/soltype-app.png" alt="" />
               <h2 className="mb-3 mt-4 blog-card-title text-start shorten-title">
                 El Emprendedor Del Futuro

@@ -30,10 +30,10 @@ export async function getStaticProps() {
   };
 }
 
-const Discover = ({ blogs }: { blogs: any }) => {
+const Notas = ({ blogs }: { blogs: any }) => {
   const description =
-    "Join me on a journey into the exciting world of web development... where I'll reveal insider tips and tricks to take your skills to the next LEVEL and become ...";
-  const title = "The Juanbri Letter | Juan Pablo Briceno";
+    "Acompáñame en este viaje hacia el éxito empresarial en línea. Si estás listo para iniciar tu propio negocio, pero no sabes por dónde empezar, déjame capacitarte con habilidades esenciales para que puedas arrancar con paso firme. No te sientas abrumado por la falta de claridad en tus ideas.";
+  const title = "Las Notas De Juanbri | Juan Briceno";
   const date = new Date();
   const image = "https://svgshare.com/i/pdv.svg";
   return (
@@ -48,18 +48,17 @@ const Discover = ({ blogs }: { blogs: any }) => {
       <MetaTag
         title={title}
         description={description}
-        url={URL + "/discover"}
+        url={URL + "/notas"}
         image={image}
       />
-      <Spacer size={40} />
+      <Spacer size={80} />
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
           <div className="flex md:grid md:grid-cols-2">
             <div className="">
-              <p className="title mb-4 md:mb-8">BEFORE YOU READ</p>
+              <p className="title mb-4 md:mb-8">ANTES DE QUE LEAS</p>
               <h2 className="huge-title mb-4 md:mb-8">
-                Get The Latest Issue Of The Juanbri Letter Sent Straight To Your
-                Inbox
+                ¿Deseas recibir estos recursos de manera directa?
               </h2>
               <Subscribe />
             </div>
@@ -67,16 +66,16 @@ const Discover = ({ blogs }: { blogs: any }) => {
           <Spacer size={60} />
 
           <Header
-            category={"THE JUANBRI LETTER"}
-            title={"Explore Your Curiosity"}
+            category={""}
+            title={"Descubre Tu Curiosidad"}
             description={
-              "Exploring the depths of human potential, business strategies, and web possibilities."
+              "Explorando el potencial humano, estrategias empresariales y oportunidades de emprendimiento en línea."
             }
           />
           <div className="md:grid md:grid-cols-3 md:gap-8">
             {blogs
               .filter((entry: any) =>
-                true
+                false
                   ? entry.fields.language === "en"
                   : entry.fields.language === "es"
               )
@@ -110,11 +109,11 @@ const Discover = ({ blogs }: { blogs: any }) => {
       <Spacer size={40} />
       <Footer
         copy={
-          "I dive deep into human potential, lifestyle design, and one-person businesses to give you a unique, digestible way of improving your life."
+          "Me adentro en el potencial humano y los negocios unipersonales para ofrecerte una forma única de alcanzar tu potencial."
         }
       />
     </>
   );
 };
 
-export default Discover;
+export default Notas;

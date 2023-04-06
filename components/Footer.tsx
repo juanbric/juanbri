@@ -35,7 +35,7 @@ const Footer = ({ copy }: { copy: string }) => {
                 <img src="/logo.svg" className="w-[52px] h-[52px]" />
               </Link>
               <h3 className="sub-sub-title my-4">
-                Work Less. Earn More. Live fully.
+                Aprende. Emprende. Triunfa.
               </h3>
               <h2 className="copy">{copy}</h2>
               <div className="flex flex-row">
@@ -46,7 +46,7 @@ const Footer = ({ copy }: { copy: string }) => {
             </div>
             <div className="">
               <h2 className="sub-title mb-3">
-                Gain A New Perspective On Life and Business
+                Obtén Una Nueva Perspectiva Sobre Cómo Emprender Tu Negocio.
               </h2>
               <div className="mb-12 md:mb-0">
                 <Subscribe />
@@ -54,7 +54,7 @@ const Footer = ({ copy }: { copy: string }) => {
             </div>
           </div>
           <Spacer size={72} />
-          <p className="text-center">© All Rights Reserved.</p>
+          <p className="text-center">Copyright © 2023 Juan Briceno - Reservados todos los derechos.</p>
           <Spacer size={30} />
         </div>
       </div>
