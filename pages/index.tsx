@@ -8,6 +8,7 @@ import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import Blog from "@/components/Blog";
+import Content from "@/components/Content";
 
 export async function getStaticProps() {
   // Store contentful API keys into a client variable
@@ -31,7 +32,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
-  const metaTitle = "Juan Briceno | Encuentra tu camino emprendedor";
+  const metaTitle = "Juan Briceno";
   const localDescription =
     "Si quieres iniciar un negocio online pero no sabes por dónde empezar, te capacito con habilidades esenciales para arrancar con paso firme. Empieza tu camino empresarial sin sentirte abrumado por la falta de claridad en tus ideas.";
   const date = new Date();
@@ -53,14 +54,15 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
         image={image}
       />
       <Banner />
+      <Content />
       {/* <Resources /> */}
-      <Blog blogs={blogs} />
-      <About />
+      {/* <Blog blogs={blogs} /> */}
+      {/* <About />
       <Footer
         copy={
           "Me adentro en el potencial humano, estrategias empresariales y posibilidades en línea, para ofrecerte un enfoque simple de cómo comenzar tu proyecto."
         }
-      />
+      /> */}
     </>
   );
 }
