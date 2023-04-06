@@ -18,25 +18,25 @@ export const MetaTag = ({
       <meta
         name="keywords"
         content={
-          "front end software developer, las palmas de gran canaria, españa, spain, desarrollador frontend, seo"
+          "emprender, tecnología, estrategia de negocio, marketing, email marketing, creación de leads, desarrollo web"
         }
       />
       <meta name="distribution" content="Global" />
       <meta name="revisit-after" content="21 days" />
-      <meta name="creator" content="Juan Pablo Briceno" />
+      <meta name="creator" content="Juan Briceno" />
       <link rel="icon" href="/favicon.png" />
       <link rel = "canonical" href ={url}/>
-      <meta name="publisher" content="Juan Pablo Briceno (juanbri.dev)" />
-      <meta name="author" content="Juan Pablo Briceno (juanbri.dev)" />
+      <meta name="publisher" content="Juan Briceno" />
+      <meta name="author" content="Juan Briceno" />
       <meta http-equiv="content-language" content="en" />
       <meta
         name="classification"
-        content="agencia de desarrollo web, seo, las palmas de gran canaria, web development agency, freelance developer, frontend developer"
+        content="emprender, tecnología, estrategia de negocio, marketing, email marketing, creación de leads, desarrollo web"
       />
       <meta name="robots" content="index, follow" />
 
       {/* Twitter */}
-      <meta name="twitter:site" content="@juanbri_sol" />
+      <meta name="twitter:site" content="@juanbri__" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:card" content="summary_large_image" />
