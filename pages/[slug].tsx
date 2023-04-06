@@ -111,9 +111,9 @@ export const Slug = ({ blog, blogs }: { blog: any; blogs: any }) => {
                 Last update on {localDate}
               </span>
               <span className="mt-0.5">
-                <Tooltip>
-                  <CopyButton link={link} />
-                </Tooltip>
+                  {/* <Tooltip>
+                    <CopyButton link={link} />
+                  </Tooltip> */}
               </span>
             </section>
             <Spacer size={18} />

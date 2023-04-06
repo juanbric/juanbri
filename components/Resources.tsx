@@ -1,58 +1,62 @@
-import Link from "next/link";
 import React from "react";
-import BlogCard from "./BlogCard";
 import Header from "./Header";
 import Spacer from "./Spacer";
 
-const Resources = ({ blogs }: { blogs: any }) => {
+const Resources = () => {
   return (
-    <section className="">
+    <section id={"recursos"} className="">
       <Header
-        category={"RESOURCES"}
-        title={"The Juanbri Letter"}
+        category={"RECURSOS"}
+        title={"¿Por Dónde Empiezo?"}
         description={
-          "Gain clarity on your purpose, nurture your creative side, and build a $1 Million dollar skill stack."
+          "Obtén claridad en tu propósito y construye una pila de habilidades de un millón de dólares."
         }
       />
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1180px]">
           <Spacer size={10} />
-          <div className="md:grid md:grid-cols-3 md:gap-12">
-            {blogs
-              .filter((entry: any) =>
-                true
-                  ? entry.fields.language === "en"
-                  : entry.fields.language === "es"
-              )
-              .slice(0, 3)
-              .map((article: any, i: any) => {
-                const { title, slug, description, language } = article?.fields;
-                const img = article?.fields.img.fields.file.url;
-                const date = article.sys.updatedAt;
-                return (
-                  <div
-                    key={article?.sys.id}
-                    className="md:col-span-1 md:mb-0 mb-6"
-                  >
-                    <Link href={slug}>
-                      <BlogCard
-                        img={img}
-                        title={title}
-                        description={description}
-                        date={date}
-                      />
-                    </Link>
-                  </div>
-                );
-              })}
-          </div>
-          <div className="text-center mt-16 hover:scale-105 transform-gpu ease-in-out duration-300">
-            <Link
-              href={"/discover"}
-              className="bg-blue py-3 rounded-[2px] px-12 hover:text-second hover:bg-second hover:scale-110 text-white transform-gpu ease-in-out duration-300"
-            >
-              Continue Exploring
-            </Link>
+          <div className="md:grid md:grid-cols-2 md:gap-12">
+            <div className="mb-8 md:mb-0">
+              <img src="/soltype-app.png" alt="" />
+              <h2 className="mb-3 mt-4 blog-card-title text-start shorten-title">
+                El Emprendedor Del Futuro
+              </h2>
+              <h3 className="copy shorten-p text-start">
+                Empower your entrepreneurial journey by learning how to
+                bootstrap your business with essential coding, business
+                strategy, marketing, and sales skills,{" "}
+                <strong>
+                  all while aligning your life with your values and passions.
+                </strong>
+              </h3>
+              <Spacer size={12} />
+              <div className="flex items-start">
+                <p className="sub-sub-title bg-blue py-3 rounded-[2px] px-6  hover:text-second hover:bg-second hover:scale-110 text-white transform-gpu ease-in-out duration-300">
+                  Acepta El Reto
+                </p>
+              </div>
+            </div>
+
+            <div className="">
+              <img src="/soltype-app.png" alt="" />
+              <h2 className="mb-3 mt-4 blog-card-title text-start shorten-title">
+                El Emprendedor Del Futuro
+              </h2>
+              <h3 className="copy shorten-p text-start">
+                Empower your entrepreneurial journey by learning how to
+                bootstrap your business with essential coding, business
+                strategy, marketing, and sales skills,{" "}
+                <strong>
+                  all while aligning your life with your values and passions.
+                </strong>
+              </h3>
+              <Spacer size={12} />
+              <div className="flex items-start">
+                <p className="sub-sub-title bg-blue py-3 rounded-[2px] px-6  hover:text-second hover:bg-second hover:scale-110 text-white transform-gpu ease-in-out duration-300">
+                  Acepta El Reto
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
