@@ -54,8 +54,8 @@ export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
       />
       <Banner />
       {/* <Resources /> */}
-      <Blog blogs={blogs} />
       <About />
+      <Blog blogs={blogs} />
       <Footer
         copy={
           "Me adentro en el potencial humano, estrategias empresariales y posibilidades en línea, para ofrecerte un enfoque simple de cómo comenzar tu proyecto."

@@ -49,27 +49,27 @@ const About = () => {
             <span className="md:col-span-2">
               <h2 className="sub-title mb-3">Hola, soy Juan.</h2>
               <h1 className="sub-sub-title mb-4">
-                Soy un asesor de emprendedores en busca de una idea de negocio
-                online clara y definida.
+                Soy un asesor de emprendedores en busca de incrementar sus
+                ganancias con tecnología.
               </h1>
               <h2 className="copy">
                 Soy el tipo al que acuden cuando quieren convertir ideas
-                desorganizadas en un negocio concreto y rentable. Mi objetivo es
-                que comiences tu camino empresarial sin sentirte abrumado por la
-                falta de claridad en tus ideas o las últimas tecnologías.
+                desorganizadas en un negocio que se lucra de la web. Mi objetivo
+                es que comiences tu camino empresarial sin sentirte abrumado por
+                la falta de claridad en las últimas tecnologías.
                 <br />
                 <br />
-                Como consultor y exfreelancer, graduado de maestría en
-                comportamiento humano en la Universidad de Leiden, he
-                desarrollado sistemas efectivos a lo largo del tiempo, con
-                experiencia adquirida de haber trabajado con más de 4000
-                estudiantes y clientes.
+                Como consultor, programador y fundador de una start-up, graduado
+                de maestría en comportamiento humano en la Universidad de
+                Leiden, he desarrollado sistemas efectivos a lo largo del
+                tiempo, con experiencia adquirida de haber trabajado con más de
+                4000 estudiantes y clientes.
                 <br />
                 <br />
               </h2>
               <h3 className="sub-sub-title mb-4">
                 Actualmente estoy aceptando clientes por tiempo limitado. Si
-                quieres aprender las habilidades del emprendedor del futuro,{" "}
+                necesitas ayuda con tu página web, SEO, o publicidad en FB,{" "}
                 <a
                   href="mailto:juanbri@gmx.com?subject=Hey%20Juan%20%3A)"
                   target="_blank"
