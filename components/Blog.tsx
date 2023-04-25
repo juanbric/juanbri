@@ -24,7 +24,7 @@ const Blog = ({ blogs }: { blogs: any }) => {
                   ? entry.fields.language === "en"
                   : entry.fields.language === "es"
               )
-              .slice(0, 6)
+              .slice(0, 3)
               .map((article: any, i: any) => {
                 const { title, slug, description, language } = article?.fields;
                 const img = article?.fields.img.fields.file.url;
