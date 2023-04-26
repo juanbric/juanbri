@@ -31,7 +31,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ blog, blogs }: { blog: any; blogs: any }) {
-  const metaTitle = "Juan Briceno | Encuentra tu camino emprendedor";
+  const metaTitle = "Juan Briceno | Emprende con tecnología";
   const localDescription =
     "Si quieres iniciar un negocio online pero no sabes por dónde empezar, te capacito con habilidades esenciales para arrancar con paso firme. Empieza tu camino empresarial sin sentirte abrumado por la falta de claridad en tus ideas.";
   const date = new Date();
