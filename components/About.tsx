@@ -59,11 +59,21 @@ const About = () => {
                 la falta de claridad en las últimas tecnologías.
                 <br />
                 <br />
-                Como consultor, programador y fundador de una start-up, graduado
-                de maestría en comportamiento humano en la Universidad de
-                Leiden, he desarrollado sistemas efectivos a lo largo del
-                tiempo, con experiencia adquirida de haber trabajado con más de
-                4000 estudiantes y clientes.
+                Como programador, experto en Marketing de afiliados con una
+                página de{" "}
+                <a
+                  href="https://eltoldovela.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 gap-4"
+                >
+                  toldos vela
+                </a>
+                , y fundador de una start-up, graduado de maestría en
+                comportamiento humano en la Universidad de Leiden, he
+                desarrollado sistemas efectivos a lo largo del tiempo, con
+                experiencia adquirida de haber trabajado con más de 4000
+                estudiantes y clientes.
                 <br />
                 <br />
               </h2>
